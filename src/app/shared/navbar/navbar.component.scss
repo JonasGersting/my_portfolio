@@ -1,0 +1,46 @@
+@import './../../../styles.scss';
+@import './../../../allFont.scss';
+
+
+
+.links{
+    @include orderElements($justify_content: space-between, $direction: row);
+    width: 800px;
+    > a{
+        font-family: 'Josefin Sans';
+        border: none;
+        text-decoration: none;
+        font-size: 26px;
+        color: $primary_darg_grey;
+    }
+}
+
+.orderNavbar{
+    padding: 24px;
+    @include orderElements($gap: 32px, $direction: row, $justify_content: space-around);
+    background-color: $primary_blue;
+}
+
+.orderLogo{
+    @include orderElements();
+
+    > img{
+        height: 38px;
+        width: 52px;
+    }
+
+    > span{
+        &:nth-child(2){
+            color: $creme_white;
+            font-weight: 400;
+        }
+
+        &:nth-child(3){
+            color: $primary_darg_grey;
+            font-weight: 300;
+        }
+    font-size: 14;
+    
+    }
+
+}

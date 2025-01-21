@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+$primary_blue: #89BCD9;
+$primary_darg_grey: #262E34;
+$creme_white: #F8F5EC;
+$secondary_light_frey: #262E34;
+$error:#E44C35;
+$done: #97E163;
+
+@mixin orderElements($display: flex, $justify_content: center, $align_items: center, $gap: 0px, $direction: column) {
+    display: $display;
+    justify-content: $justify_content;
+    align-items: $align_items;
+    gap: $gap;
+    flex-direction: $direction;
+}
+
+
+*{
+    margin: 0;
+}
