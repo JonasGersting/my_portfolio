@@ -3,44 +3,74 @@
 
 
 
-.links{
+.links {
     @include orderElements($justify_content: space-between, $direction: row);
     width: 800px;
-    > a{
+
+    >a {
         font-family: 'Josefin Sans';
         border: none;
         text-decoration: none;
         font-size: 26px;
-        color: $primary_darg_grey;
+        color: $primary_dark_grey;
+
+        &:hover{
+            color: $creme_white;
+        }
     }
 }
 
-.orderNavbar{
+.orderNavbar {
     padding: 24px;
     @include orderElements($gap: 32px, $direction: row, $justify_content: space-around);
     background-color: $primary_blue;
 }
 
-.orderLogo{
+.orderLogo {
     @include orderElements();
+    text-decoration: none;
 
-    > img{
+    >img {
         height: 38px;
         width: 52px;
     }
 
-    > span{
-        &:nth-child(2){
+    >span {
+        &:nth-child(2) {
             color: $creme_white;
             font-weight: 400;
         }
 
-        &:nth-child(3){
-            color: $primary_darg_grey;
+        &:nth-child(3) {
+            color: $primary_dark_grey;
             font-weight: 300;
         }
-    font-size: 14;
-    
-    }
 
+        font-size: 14;
+    }
 }
+
+
+.switchLangBtns {
+
+    >button {
+        cursor: pointer;
+        color: $primary_dark_grey;
+        font-weight: 400;
+        font-size: 18px;
+        border: none;
+        background-color: transparent;
+
+
+        &:hover {
+            background-image: none;
+            color: $creme_white;
+        }
+
+        &.active {
+            background-image: url('./../../../assets/img/ellipse.png');
+            color: $creme_white;
+        }
+    }
+}
+

@@ -1,0 +1,24 @@
+@import './../../styles.scss';
+@import './../../allFont.scss';
+
+section {
+    @include orderElements($display: flex, $direction: row);
+    width: 100%;
+    height: 100vh;
+    background-color: $primary_dark_grey;
+}
+
+
+.profilePic {
+    @include orderElements($display: flex, $direction: row);
+    width: 800px;
+    background-image: url('./../../assets/img/backgroundProfilePic.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 685px;
+
+    >img {
+        width: 500px;
+
+    }
+}
