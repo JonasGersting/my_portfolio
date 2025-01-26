@@ -1,0 +1,19 @@
+@import './../../styles.scss';
+@import './../../allFont.scss';
+
+section {
+    @include orderElements();
+    background-color: $primary_dark_grey;
+    width: 100%;
+
+    > h2 {
+        @include setFont($family: 'Anta',  $size: 60px, $weight: 400);
+        color: $primary_blue;
+        margin-top: 128px;
+        margin-bottom: 48px;
+    }
+
+    > div {
+        @include orderElements($direction: row);
+    }
+}
