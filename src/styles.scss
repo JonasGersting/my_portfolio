@@ -1,7 +1,7 @@
 $primary_blue: #89BCD9;
 $primary_dark_grey: #262E34;
 $creme_white: #F8F5EC;
-$secondary_light_frey: #262E34;
+$secondary_light_grey: #262E34;
 $error:#E44C35;
 $done: #97E163;
 
@@ -11,6 +11,12 @@ $done: #97E163;
     align-items: $align_items;
     gap: $gap;
     flex-direction: $direction;
+}
+
+@mixin setFont($family, $size, $weight, ) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
 }
 
 

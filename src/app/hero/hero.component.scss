@@ -4,14 +4,14 @@
 section {
     @include orderElements($display: flex, $direction: row);
     width: 100%;
-    height: 100vh;
+    height: 780px;
     background-color: $primary_dark_grey;
 }
 
 
 .profilePic {
     @include orderElements($display: flex, $direction: row);
-    width: 800px;
+    width: 600px;
     background-image: url('./../../assets/img/backgroundProfilePic.png');
     background-position: bottom;
     background-repeat: no-repeat;
@@ -22,3 +22,87 @@ section {
 
     }
 }
+
+.heroSectionRight{
+    @include orderElements();
+}
+
+.logoWithName{
+    @include orderElements($display: flex,);
+
+    > span {
+        &:nth-child(2) {
+            @include setFont($family: 'anta', $size: 16px, $weight: 400);
+            color: $creme_white;
+        }
+
+        &:nth-child(3) {
+            @include setFont($family: 'Josefin Sans', $size: 16px, $weight: 300);
+            color: $primary_blue;
+        }
+    }
+
+    margin-bottom: 64px;
+    
+}
+
+.logoWithoutName{
+    @include orderElements($display: flex, $justify_content: space-around, $align_items: center, $direction: row);
+    position: relative;
+    width: 56px;
+    height: 38px;
+
+    > span {
+        @include setFont($family: 'Roboto Mono', $size:16px, $weight: 400);
+        color: $creme_white;
+        margin-bottom: 3px;
+        &:nth-child(1){
+            margin-right: 3px;
+        }
+
+        &:nth-child(3){
+            margin-left: 3px;
+            margin-right: 2px;
+        }
+    }
+
+    > img {
+        position: absolute;
+        transition: transform 0.3s ease;
+
+        &:hover{
+            transform: rotateY(180deg);        }
+    }
+
+}
+
+
+.headlineOrder{
+    @include orderElements($display: flex,);
+
+    > h1 {
+        @include setFont($family: 'anta', $size: 88px, $weight: 400);
+        color: $creme_white;
+        margin-bottom: 16px;
+    }
+
+    > h2{
+        @include setFont($family: 'Josefin Sans', $size: 40px, $weight: 400);
+        color: $creme_white;
+    }
+}
+
+.arrow {
+    @include orderElements($display: flex, $justify_content: center, $align_items: center, );
+    border: 1px solid $primary_blue;
+    margin-top: 120px;
+    width: 40px;
+    height: 100px;
+    border-radius: 32px;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: #3F454A;
+    }
+}
+
+
