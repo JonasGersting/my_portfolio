@@ -1,0 +1,74 @@
+@import './../../styles.scss';
+@import './../../allFont.scss';
+
+section {
+    @include orderElements();
+    width: 100%;
+    background-color: $primary_dark_grey;
+
+}
+
+h2 {
+    @include setFont($size: 60px, $family: 'Anta', $weight: 400);
+    color: $primary_blue;
+    margin-top: 128px;
+    margin-bottom: 48px;
+}
+
+.orderLocAndText {
+    @include orderElements ($direction: row, $align_items: start);
+}
+
+.location {
+    @include orderElements ($direction: row);
+    @include setFont ($family: 'Josefin Sans', $weight: 700, $size: 30px);
+    gap: 10px;
+    margin-right: 64px;
+    >span {
+
+        &:nth-child(2) {
+            color: $primary_blue;
+        }
+
+        &:nth-child(3) {
+            color: $creme_white;
+        }
+    }
+}
+
+.whoAmI {
+    @include setFont ($family: 'Josefin Sans', $weight: 400, $size: 18px);
+    color: $creme_white;
+    width: 380px;
+    height: 180px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+    > span {
+        line-height: 21.6px;
+    }
+
+    > div {
+        @include orderElements($align_items: end);
+
+        >a {
+            @include orderElements();
+          
+            margin-top: 16px;
+            color: $primary_blue;
+            text-decoration: none;
+            width: 132px;
+            height: 48px;
+            border: 2px solid $primary_blue;
+            border-radius: 32px;
+            transition: background-color 0.3s ease;
+    
+            &:hover {
+                background-color: #3F454A;
+            }
+        }
+    }
+
+   
+}

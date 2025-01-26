@@ -27,6 +27,41 @@ section {
     @include orderElements();
 }
 
+.socialMediaWrapper {
+    @include orderElements($direction: row, $justify_content: end);
+    width: 100%;
+}
+
+.socialMedia{
+    @include orderElements();
+    > a {
+        margin-bottom: 8px !important;
+        width: 32px;
+        height: 32px;
+        background-image: url('./../../assets/img/githubDefault.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        &:nth-child(1){
+            background-image: url('./../../assets/img/githubDefault.png');
+            &:hover {
+                background-image: url('./../../assets/img/githubHoverBlue.png');
+            }
+        }
+        &:nth-child(2){
+            background-image: url('./../../assets/img/emailDefault.png');
+            &:hover {
+                background-image: url('./../../assets/img/emailHoverBlue.png');
+            }
+        }
+        &:nth-child(3){
+            background-image: url('./../../assets/img/linkedinDefault.png');
+            &:hover {
+                background-image: url('./../../assets/img/linkedinHoverBlue.png');
+            }
+        }
+    }
+}
+
 .logoWithName{
     @include orderElements($display: flex,);
 
