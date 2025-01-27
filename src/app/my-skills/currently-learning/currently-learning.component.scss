@@ -16,7 +16,6 @@
         background: url('./../../../assets/img/currentlyLearningBg2.png') no-repeat center;
         opacity: 1;
         transition: opacity 0.5s ease-in-out; 
-        z-index: 1; 
     }
 
     &::before {
@@ -29,7 +28,6 @@
         background: url('./../../../assets/img/currentlyLearningBgHover.png') no-repeat center;
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
-        z-index: 2; 
     }
 
     &:hover::after {

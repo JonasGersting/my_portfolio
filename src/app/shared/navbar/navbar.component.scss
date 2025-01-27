@@ -24,6 +24,7 @@
     padding: 24px;
     @include orderElements($gap: 32px, $direction: row, $justify_content: space-around);
     background-color: $primary_blue;
+    z-index: 5;
 }
 
 .orderLogo {

@@ -4,6 +4,7 @@ $creme_white: #F8F5EC;
 $secondary_light_grey: #262E34;
 $error:#E44C35;
 $done: #97E163;
+$tabBg: #2D383F;
 
 @mixin orderElements($display: flex, $justify_content: center, $align_items: center, $gap: 0px, $direction: column) {
     display: $display;

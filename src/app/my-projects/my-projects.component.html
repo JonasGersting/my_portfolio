@@ -1,1 +1,9 @@
-<p>my-projects works!</p>
+<section>
+    <h2>My Projects</h2>
+    <div>
+        <button (click)="activateBtn(1)" [ngClass]="activeButton === 1 ? 'activeBtn' : 'inactiveBtn'">1. El pollo Loco</button>
+        <button (click)="activateBtn(2)" [ngClass]="activeButton === 2 ? 'activeBtn' : 'inactiveBtn'">2. Join</button>
+        <button (click)="activateBtn(3)" [ngClass]="activeButton === 3 ? 'activeBtn' : 'inactiveBtn'">3. Ring of Fire</button>
+    </div>
+    <app-project></app-project>
+</section>
