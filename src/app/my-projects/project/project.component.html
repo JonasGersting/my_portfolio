@@ -6,21 +6,21 @@
                 <h3>{{ project.headline1 }}</h3>
                 <span>Duration: {{ project.duration }}</span>
             </div>
-            <span>{{ project.description1 }}</span>
+            <span [innerHTML]="project.description1"></span>
         </div>
         <div>
             <div>
                 <img src="./../../../assets/img/bulletPoint.png" alt="">
                 <h3>{{ project.headline2 }}</h3>
             </div>
-            <span>{{ project.description2 }}</span>
+            <span [innerHTML]="project.description2"></span>
         </div>
         <div>
             <div>
                 <img src="./../../../assets/img/bulletPoint.png" alt="">
                 <h3>{{ project.headline3 }}</h3>
             </div>
-            <span>{{ project.description3 }}</span>
+            <span [innerHTML]="project.description3"></span>
         </div>
     </div>
     <div class="projectImgs">
@@ -31,7 +31,7 @@
             <img [src]="project.technologies[2]" alt="">
         </div>
         <img [src]="project.img" alt="">
-        <div>
+        <div class="projectLinks">
             <a href="">Live Test</a>
             <a href="">GitHub</a>
         </div>
