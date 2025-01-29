@@ -46,7 +46,31 @@ section {
     }
 }
 
+.appProjectWrapper {
+    background-color: $tabBg;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 app-project {
     width: 100%;
     height: 100%;
-}
+    display: none; // Standardmäßig ausblenden
+  
+    &.active {
+      display: block; // Sichtbar, wenn aktiv
+    }
+  
+    &.animate {
+      animation: slideInFromRight 0.7s ease-in-out;
+    }
+  }

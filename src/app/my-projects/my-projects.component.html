@@ -6,7 +6,10 @@
         }
         
     </div>
-    @if (activeButton !== null) {
-    <app-project [project]="projects[activeButton]"></app-project>
-    }
+    <div class="appProjectWrapper" >
+        @if (activeButton !== null) {
+            <app-project [project]="projects[activeButton]" [ngClass]="{'active': activeButton !== null, 'animate': triggerAnimation}" ></app-project>
+            }
+    </div>
+
 </section>

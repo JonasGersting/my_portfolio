@@ -10,7 +10,8 @@ import { ProjectComponent } from "./project/project.component";
   styleUrls: ['./my-projects.component.scss']
 })
 export class MyProjectsComponent {
-  activeButton: number = 0;  
+  activeButton: any = 0;
+  triggerAnimation: boolean = false;
   projects: any = [
     { title: 'El pollo Loco',
       headline1:'About the project',
@@ -60,7 +61,11 @@ export class MyProjectsComponent {
   ];
 
  
-  activateBtn(position: number) {    
+  activateBtn(position: number) {
+    this.triggerAnimation = false; // Animation zurücksetzen
+    setTimeout(() => {
       this.activeButton = position;
+      this.triggerAnimation = true; // Animation erneut starten
+    }, 50); // Verzögerung von 0ms, um den Zustand zu aktualisieren
   }
 }
