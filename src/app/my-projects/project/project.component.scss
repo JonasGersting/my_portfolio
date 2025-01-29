@@ -7,9 +7,11 @@ section {
     height: 100%;
     margin-top: 64px;
 
+
     >.projectBulletPoints {
         @include orderElements($align_items: start, $justify_content: start);
         margin-right: 48px;
+        margin-left: 150px;
         height: 100%;
         width: 600px;
 
@@ -29,7 +31,7 @@ section {
 
                 >img {
                     position: absolute;
-                    right: 105%;
+                    left: -64px;
                 }
 
                 >h3 {
