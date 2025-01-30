@@ -1,0 +1,15 @@
+<section>
+    <h2>Looking for someone versatile? I thrive both independently and collaboratively.</h2>
+    <div class="presentationWrapper" >
+        @for  (element of presentation; track $index) {
+            <div class="background">
+                <div class="representationSection">
+                    <h3>{{element.title}}</h3>
+                    <span>{{element.text}}</span>
+                    <img [src]="element.img" alt="">
+                </div>
+            </div>
+        }
+       
+    </div>
+</section>

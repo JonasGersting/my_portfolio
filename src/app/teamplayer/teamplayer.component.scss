@@ -1,0 +1,85 @@
+@import './../../styles.scss';
+@import './../../allFont.scss';
+
+section {
+    @include orderElements();
+    background-color: $primary_dark_grey;
+    width: 100%;
+    height: 600px;
+    > h2 {
+        @include setFont($family: 'Josefin Sans', $size: 32px, $weight: 800);
+        color: $primary_blue;
+        margin-top: 32px;
+        margin-bottom: 64px;
+    }
+
+    .presentationWrapper {
+        @include orderElements($direction: row, $justify_content: space-evenly);
+        width: 1500px;
+    }
+}
+
+
+.background {
+    @include orderElements();
+    width: 380px;
+    height: 380px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('./../../assets/img/currentlyLearningBg2.png') no-repeat center;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out; 
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('./../../assets/img/currentlyLearningBgHover.png') no-repeat center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    &:hover::after {
+        opacity: 0; 
+        filter: brightness(1.2);  
+    }
+
+    &:hover::before {
+        opacity: 1; 
+        filter: brightness(1.2);  
+    }
+}
+
+.representationSection {
+    @include orderElements();
+    
+    color: $creme_white;
+    padding: 16px;
+    width: 310px;
+    height: 310px;
+    text-align: center;
+    line-height: 22px;
+
+    > h3 {
+        @include setFont($size: 26px, $family: 'Josefin Sans', $weight: 600);
+        color: $primary_blue;
+
+    }
+   
+    > span {
+        @include setFont($size: 18px, $family: 'Josefin Sans', $weight: 400);
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+
+}

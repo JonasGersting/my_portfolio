@@ -1,5 +1,23 @@
-app-navbar{
+app-navbar {
     position: sticky;
     top: 0;
     z-index: 5;
+}
+
+.scroll-animate {
+    opacity: 0;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in-right {
+    animation: appear 1s ease-out forwards;
 }

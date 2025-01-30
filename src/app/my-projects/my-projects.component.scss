@@ -2,52 +2,51 @@
 @import './../../allFont.scss';
 
 section {
-    @include orderElements();
+  @include orderElements();
+  width: 100%;
+  background-color: $primary_dark_grey;
+
+  >h2 {
+    @include setFont($family: 'Anta', $size: 60px, $weight: 400);
+    color: $primary_blue;
+    margin-top: 64px;
+    margin-bottom: 48px;
+  }
+
+  >div {
+    @include orderElements($direction: row);
     width: 100%;
-    height: 780px;
-    background-color: $primary_dark_grey;
 
-    >h2 {
-        @include setFont($family: 'Anta', $size: 60px, $weight: 400);
-        color: $primary_blue;
-        margin-top: 128px;
-        margin-bottom: 48px;
+    >button {
+      @include setFont($family: 'Josefin Sans', $size: 30px, $weight: 500);
+      width: 250px;
+      height: 100px;
+      cursor: pointer;
+      border: none;
     }
-
-    >div {
-        @include orderElements($direction: row);
-        width: 100%;
-
-        >button {
-            @include setFont($family: 'Josefin Sans', $size: 30px, $weight: 500);
-            width: 250px;
-            height: 100px;
-            cursor: pointer;
-            border: none;
-        }
-    }
+  }
 }
 
 .activeBtn {
-    background-color: $tabBg;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
-    color: $creme_white;
+  background-color: $tabBg;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  color: $creme_white;
 }
 
 .inactiveBtn {
 
-    color: $primary_blue;
+  color: $primary_blue;
 
-    background-color: $primary_dark_grey;
+  background-color: $primary_dark_grey;
 
-    &:hover {
-        color: $creme_white;
-    }
+  &:hover {
+    color: $creme_white;
+  }
 }
 
 .appProjectWrapper {
-    background-color: $tabBg;
+  background-color: $tabBg;
 }
 
 @keyframes slideInFromRight {
@@ -55,6 +54,7 @@ section {
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -62,15 +62,15 @@ section {
 }
 
 app-project {
-    width: 100%;
-    height: 100%;
-    display: none; // Standardmäßig ausblenden
-  
-    &.active {
-      display: block; // Sichtbar, wenn aktiv
-    }
-  
-    &.animate {
-      animation: slideInFromRight 0.7s ease-in-out;
-    }
+  width: 100%;
+  height: 580px;
+  display: none; // Standardmäßig ausblenden
+
+  &.active {
+    display: block; // Sichtbar, wenn aktiv
   }
+
+  &.animate {
+    animation: slideInFromRight 0.7s ease-in-out;
+  }
+}

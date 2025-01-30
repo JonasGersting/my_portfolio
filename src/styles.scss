@@ -28,6 +28,7 @@ $tabBg: #2D383F;
 
 body {
     overflow-x: hidden;
+    background-color: $primary_dark_grey;
     /* Hide horizontal scrollbar */
 }
 
@@ -46,4 +47,3 @@ body {
 ::-webkit-scrollbar-thumb {
     background: white;
 }
-
