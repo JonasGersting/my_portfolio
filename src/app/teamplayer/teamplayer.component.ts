@@ -11,13 +11,13 @@ export class TeamplayerComponent {
 
   presentation: any = [
     {
-      title: 'Teamwork',
+      title: 'Collaborative',
       text: 'I excel in team environments, as demonstrated during a Kanban project named "Join," where I collaborated closely with two colleagues. Effective communication and coordination were key to our success.',
       img:'./../../../assets/img/group.png'
     },
     {
       title: 'Independent',
-      text: 'I thrive working independently,    proven by my development of a document visualization tool at work. This self-initiated project is now actively used, showcasing my ability to take initiative and deliver.',
+      text: 'I thrive working independently, proven by my development of a document and data visualization tool at work. This self-initiated project is now actively used, showcasing my ability to take initiative and deliver.',
       img:'./../../../assets/img/rocket.png'
     },
     {

@@ -7,11 +7,12 @@ import { WhyMeComponent } from './why-me/why-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsComponent } from "./my-projects/my-projects.component";
 import { TeamplayerComponent } from './teamplayer/teamplayer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, HeroComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent, TeamplayerComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, HeroComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent, TeamplayerComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
