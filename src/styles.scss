@@ -5,6 +5,7 @@ $secondary_light_grey: rgba(38, 46, 52, 0.1);
 $error: #E44C35;
 $done: #97E163;
 $tabBg: #2D383F;
+$secondary_light_blue: #1F262B;
 
 @mixin orderElements($display: flex, $justify_content: center, $align_items: center, $gap: 0px, $direction: column) {
     display: $display;
@@ -29,13 +30,13 @@ $tabBg: #2D383F;
 body {
     overflow-x: hidden;
     background-color: $primary_dark_grey;
-    /* Hide horizontal scrollbar */
 }
 
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    height: 20px;
 }
 
 /* Track */

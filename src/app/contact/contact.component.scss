@@ -1,26 +1,24 @@
 @import './../../styles.scss';
 @import './../../allFont.scss';
 
-
 section {
     @include orderElements();
     width: 100%;
     background-color: $primary_dark_grey;
 
-    >.headlineContact {
+    > .headlineContact {
         @include orderElements($direction: row);
         position: relative;
         width: 1500px;
 
-        >h2 {
+        > h2 {
             @include setFont($family: 'Anta', $size: 54px, $weight: 400);
-            margin-top: 64px;
-            margin-bottom: 64px;
+            margin: 64px 0;
             color: $primary_blue;
         }
 
-        >a {
-            @include orderElements($display: flex, $justify_content: center, $align_items: center, );
+        > a {
+            @include orderElements($display: flex, $justify_content: center, $align_items: center);
             position: absolute;
             right: 0;
             bottom: 0;
@@ -29,7 +27,7 @@ section {
             height: 100px;
             border-radius: 32px;
             transition: background-color 0.3s ease;
-        
+
             &:hover {
                 background-color: #3F454A;
             }
@@ -37,18 +35,16 @@ section {
     }
 
     form {
-        width: 1000px;
+        width: 100%;
+        max-width: 1000px;
+
         > .inputSmallWrapper {
             @include orderElements($direction: row, $justify_content: space-between);
-            margin-bottom: 48px;
-               
+            margin-bottom: 40px;
+            width: 100%;
         }
     }
-    
-
 }
-
-
 
 .rotate180 {
     rotate: 180deg;
@@ -58,8 +54,9 @@ section {
     @include orderElements($direction: row, $align_items: start, $justify_content: space-between);
     width: 1000px;
     margin-bottom: 48px;
-    >.interested {
-        @include setFont ($family: 'Josefin Sans', $size: 18px, $weight: 400);
+
+    > .interested {
+        @include setFont($family: 'Josefin Sans', $size: 18px, $weight: 400);
         color: $creme_white;
         line-height: 22px;
         max-width: 430px;
@@ -67,9 +64,9 @@ section {
         text-align: justify;
     }
 
-    >a {
+    > a {
         @include orderElements($direction: row);
-        @include setFont ($family: 'Josefin Sans', $size: 20px, $weight: 400);
+        @include setFont($family: 'Josefin Sans', $size: 20px, $weight: 400);
         line-height: 24px;
         color: $creme_white;
         width: 100%;
@@ -78,12 +75,13 @@ section {
 
         &:hover {
             color: $primary_blue;
-            >.icon {
+
+            > .icon {
                 background-image: url('./../../assets/img/emailHover.png');
             }
         }
 
-        >.icon {
+        > .icon {
             background-image: url('./../../assets/img/email.png');
             height: 32px;
             width: 32px;
@@ -94,12 +92,14 @@ section {
     }
 }
 
-
 .form-group {
     position: relative;
+    max-width: 425px;
+    width: 100%;
+    
     input {
         @include setFont($family: 'Josefin Sans', $size: 24px, $weight: 400);
-        width: 445px;
+        width: 100%;
         height: 60px;
         border: 1px solid $primary_blue;
         border-radius: 48px;
@@ -107,10 +107,12 @@ section {
         color: $primary_blue;
         outline: none;
         text-align: center;
-        padding: 10px; // Für mehr Platz um den Text
-        
+        padding: 10px;
+        box-sizing: border-box;
+
         &:focus {
-            border-color: lighten($primary_blue, 20%);
+            background-color: lighten($secondary_light_blue, 12%);
+            color: $creme_white;
         }
     }
 
@@ -126,27 +128,18 @@ section {
         transition: 0.3s ease;
         pointer-events: none;
     }
-    
-    input:focus + label {
-        top: -10px;
-        font-size: 14px;
-        color: lighten($primary_blue, 20%);
-    }
-    
+
+    input:focus + label,
     input:not(:placeholder-shown) + label {
         top: -10px;
         font-size: 14px;
-        color: $primary_blue;
     }
-    
-    input:focus:not(:placeholder-shown) + label {
-        color: lighten($primary_blue, 20%);
-    }
-    
 }
 
 .inputBig {
     position: relative;
+    width: 100%;
+
     input {
         @include setFont($family: 'Josefin Sans', $size: 24px, $weight: 400);
         width: 100%;
@@ -157,9 +150,11 @@ section {
         color: $primary_blue;
         outline: none;
         text-align: center;
-        
+        box-sizing: border-box;
+
         &:focus {
-            border-color: lighten($primary_blue, 20%);
+            background-color: lighten($secondary_light_blue, 12%);
+            color: $creme_white;
         }
     }
 
@@ -175,23 +170,82 @@ section {
         transition: 0.3s ease;
         pointer-events: none;
     }
-    
-    input:focus + label {
-        top: -10px;
-        font-size: 14px;
-        color: lighten($primary_blue, 20%);
-    }
-    
+
+    input:focus + label,
     input:not(:placeholder-shown) + label {
         top: -10px;
         font-size: 14px;
-        color: $primary_blue;
     }
-    
-    input:focus:not(:placeholder-shown) + label {
-        color: lighten($primary_blue, 20%);
-    }
-    
 }
 
+.privacyPolicyCheckbox {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    margin: 16px 0 8px;
 
+    > span {
+        @include setFont($family: 'Josefin Sans', $size: 14px, $weight: 400);
+        color: $creme_white;
+
+        > a {
+            text-decoration: none;
+            color: $primary_blue;
+            cursor: pointer;
+
+            &:hover {
+                color: $creme_white;
+            }
+        }
+    }
+}
+
+.checkbox {
+    display: none;
+}
+
+.checkbox + label {
+    background: url('./../../assets/img/checkbox.png') no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.checkbox:checked + label {
+    background: url('./../../assets/img/checkboxChecked.png') no-repeat;
+}
+
+.checkbox:not(:checked) + label:hover {
+    background: url('./../../assets/img/checkboxHover.png') no-repeat;
+}
+
+.sendWrapper {
+    @include orderElements($align_items: end);
+    width: 1000px;
+    margin-bottom: 200px;
+
+    > button {
+        @include setFont($family: 'Josefin Sans', $size: 18px, $weight: 400);
+        color: $primary_blue;
+        background-color: $primary_dark_grey;
+        border: 1px solid $primary_blue;
+        width: 100px;
+        height: 40px;
+        border-radius: 32px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        &:hover:not(:disabled) {
+            background-color: #3F454A;
+        }
+
+        &:disabled {
+            color: $creme_white;
+            border: 1px solid $creme_white;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
