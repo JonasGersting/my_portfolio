@@ -5,6 +5,9 @@ section {
     @include orderElements();
     background-color: $primary_dark_grey;
     width: 100%;
+    max-width: 1500px;
+    box-sizing: border-box;
+    padding: 0 32px 0 32px;
 
     > h2 {
         @include setFont($family: 'Anta',  $size: 60px, $weight: 400);
@@ -16,4 +19,13 @@ section {
     > div {
         @include orderElements($direction: row);
     }
+}
+
+
+@media only screen and (max-width: 1200px) {
+   section {
+    > div {
+        flex-direction: column;
+    }
+   }
 }
