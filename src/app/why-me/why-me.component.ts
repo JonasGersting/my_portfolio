@@ -97,8 +97,6 @@ export class WhyMeComponent {
         this.displayedText = this.displayedText.slice(0, -1);
       } else if (this.prefixText.length > 0) {
         this.prefixText = this.prefixText.slice(0, -1);
-      } else if (this.currentIcon.length > 0) {
-        this.currentIcon = '';
       } else {
         clearInterval(interval);
         callback();
@@ -109,8 +107,8 @@ export class WhyMeComponent {
   switchToNextText(): void {
     this.currentIndex = (this.currentIndex + 1) % this.texts.length;
     this.currentIcon = '';
-    setTimeout(() => {
+    
       this.startTypingAnimation();
-    }, 500);
+    
   }
 }
