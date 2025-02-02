@@ -271,3 +271,77 @@ textarea.ng-invalid.ng-touched {
         }
     }
 }
+
+.heroLinkResponsive {
+    @include orderElements();
+    width: 100%;
+    display: none;
+    margin: 48px 0 48px 0;
+    >a {
+        @include orderElements($display: flex, $justify_content: center, $align_items: center);
+        border: 1px solid $primary_blue;
+        width: 40px;
+        height: 100px;
+        border-radius: 32px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #3F454A;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .headlineContact {
+        > a {
+            display: none !important;
+        }
+    }
+
+    .heroLinkResponsive{
+        display: flex;
+    }
+
+    .sendWrapper{
+        margin-bottom: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .interestedWrapper {
+        align-items: center;
+        flex-direction: column;
+
+        >span {
+            margin-top: 48px;
+            order: 2;
+        }
+
+        >a{
+            order: 1;
+            width: auto;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 710px) {
+    .inputSmallWrapper{
+        flex-direction: column !important;
+        gap: 40px !important;
+        > div {
+            max-width: 100%;
+           
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .mailLabel {
+        width: 200px;
+    }
+}
+
+

@@ -3,22 +3,24 @@
 
 
 
-footer{
-    @include orderElements($direction:row, $justify_content: space-between, $align_items: end);
+footer {
+    @include orderElements($direction: row, $justify_content: space-between, $align_items: end);
     width: 100%;
     background-color: $primary_blue;
     height: 215px;
-    padding: 48px 200px 48px 200px;
+    padding: 48px 10rem 48px 10rem;
     box-sizing: border-box;
 }
 
 .legalNotice {
-     @include orderElements($align_items: start, $gap: 4px);
-     @include setFont($family: 'Josefin Sans', $size: 18px, $weight: 400);
+    @include orderElements($align_items: start, $gap: 4px);
+    @include setFont($family: 'Josefin Sans', $size: 18px, $weight: 400);
     color: $primary_dark_grey;
-    > a{
+
+    >a {
         text-decoration: none;
         color: $primary_dark_grey;
+
         &:hover {
             color: $creme_white;
         }
@@ -54,31 +56,66 @@ footer{
 }
 
 
-.socialMedia{
+.socialMedia {
     @include orderElements($direction: row, $gap: 16px);
-    > a {
+
+    >a {
         margin-bottom: 8px !important;
         width: 32px;
         height: 32px;
         background-position: center;
         background-repeat: no-repeat;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             background-image: url('./../../../assets/img/githubFooter.png');
+
             &:hover {
                 background-image: url('./../../../assets/img/githubFooterHover.png');
             }
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
             background-image: url('./../../../assets/img/mailFooter.png');
+
             &:hover {
                 background-image: url('./../../../assets/img/mailFooterHover.png');
             }
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             background-image: url('./../../../assets/img/linkedinFooter.png');
+
             &:hover {
                 background-image: url('./../../../assets/img/linkedinFooterHover.png');
             }
         }
     }
+}
+
+
+@media only screen and (max-width: 800px) {
+    footer {
+        height: auto;
+        padding: 10% 0 10% 0;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 16px;
+    }
+
+    .orderLogo {
+        order: 1; /* Setzt das Logo ganz oben */
+    }
+    
+    .socialMedia {
+        order: 2; /* Setzt die sozialen Medien nach dem Logo */
+        justify-content: space-between !important;
+        width: 150x;
+    }
+    
+    .legalNotice {
+        flex-direction: row !important;
+        order: 3; /* Setzt den rechtlichen Hinweis an das Ende */
+    }
+
 }
