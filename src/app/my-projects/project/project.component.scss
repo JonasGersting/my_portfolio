@@ -110,7 +110,7 @@ section {
 }
 
 .projectLinks {
-    @include orderElements($direction: row, $justify_content: space-between);
+    @include orderElements($direction: row, $justify_content: center, $gap: 32px);
     width: 300px;
     margin-top: 32px;
     margin-bottom: 32px;
@@ -150,6 +150,10 @@ section {
     }
 
 
+}
+
+.projectLinksSmartphone {
+    display: none;
 }
 
 

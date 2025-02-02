@@ -9,23 +9,31 @@ section {
     box-sizing: border-box;
     padding: 0 32px 0 32px;
 
-    > h2 {
-        @include setFont($family: 'Anta',  $size: 60px, $weight: 400);
+    >h2 {
+        @include setFont($family: 'Anta', $size: 60px, $weight: 400);
         color: $primary_blue;
         margin-top: 128px;
         margin-bottom: 48px;
     }
 
-    > div {
+    >div {
         @include orderElements($direction: row);
     }
 }
 
 
 @media only screen and (max-width: 1200px) {
-   section {
-    > div {
-        flex-direction: column;
+    section {
+        >div {
+            flex-direction: column;
+        }
     }
-   }
+}
+
+@media only screen and (max-width: 1000px) {
+    section {
+        >h2 {
+            margin-top: 64px !important;
+        }
+    }
 }
