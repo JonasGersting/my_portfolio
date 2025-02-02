@@ -23,3 +23,7 @@ app-navbar {
 .fade-in-right {
     animation: appear 1.5s ease-in-out forwards;
 }
+
+.orderComponent {
+    @include orderElements();
+}
