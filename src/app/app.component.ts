@@ -8,11 +8,12 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsComponent } from "./my-projects/my-projects.component";
 import { TeamplayerComponent } from './teamplayer/teamplayer.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, HeroComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent, TeamplayerComponent, ContactComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, HeroComponent, WhyMeComponent, MySkillsComponent, MyProjectsComponent, TeamplayerComponent, ContactComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

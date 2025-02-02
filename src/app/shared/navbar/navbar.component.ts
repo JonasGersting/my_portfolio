@@ -10,11 +10,16 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   selectedLang: string = 'DE'; 
+  selectedLink: string = '';
   
 
 
   setLanguage(lang: string): void {
     this.selectedLang = lang;
+  }
+
+  setLink(link: string){
+    this.selectedLink = link;
   }
 
 }

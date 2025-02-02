@@ -1,14 +1,23 @@
 <div class="orderNavbar">
-    <a href="#hero" class="orderLogo">
+    <a href="#hero" class="orderLogo"
+    (click)="setLink('')">
         <img src="../../../assets/img/logo.png" alt="">
         <span class="anta" >J.Gersting</span>
         <span class="josefin-sans">developer</span>
     </a>
     <div class="links">
-        <a href="#why-me">Why me</a>
-        <a href="#skills">Skills</a>
-        <a href="#my-projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#why-me"
+        [ngClass]="{'activeLink': selectedLink === 'whyMe'}"
+        (click)="setLink('whyMe')">Why me</a>
+        <a href="#skills"
+        [ngClass]="{'activeLink': selectedLink === 'skills'}"
+        (click)="setLink('skills')">Skills</a>
+        <a href="#my-projects"
+        [ngClass]="{'activeLink': selectedLink === 'projects'}"
+        (click)="setLink('projects')">Projects</a>
+        <a href="#contact"
+        [ngClass]="{'activeLink': selectedLink === 'contact'}"
+        (click)="setLink('contact')">Contact</a>
     </div>
     <div class="switchLangBtns">
         <button 

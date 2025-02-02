@@ -8,13 +8,24 @@
     width: 800px;
 
     >a {
+         @include orderElements();
         font-family: 'Josefin Sans';
         border: none;
         text-decoration: none;
         font-size: 26px;
         color: $primary_dark_grey;
+        width: 100px;
+        height: 56px;
 
         &:hover{
+            color: $creme_white;
+        }
+
+        
+        &.activeLink {
+            background-image: url('./../../../assets/img/ellipseMenuBig.png');
+            background-position: center;
+            background-repeat: no-repeat;
             color: $creme_white;
         }
     }
@@ -56,6 +67,7 @@
 
     >button {
         cursor: pointer;
+        height: 25px;
         color: $primary_dark_grey;
         font-weight: 400;
         font-size: 18px;
