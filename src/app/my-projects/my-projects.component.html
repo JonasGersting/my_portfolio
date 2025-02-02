@@ -2,7 +2,13 @@
     <h2>My Projects</h2>
     <div>
         @for  (element of projects; track $index) {
-            <button (click)="activateBtn($index)" [ngClass]="activeButton === $index ? 'activeBtn' : 'inactiveBtn'">{{ $index+ 1 }}. {{ element.title }}</button>
+            <button (click)="activateBtn($index)" [ngClass]="activeButton === $index ? 'activeBtn' : 'inactiveBtn'">{{ $index+ 1 }}.
+                @if (showTitle) {
+                    <span>{{ element.title }}</span>
+                } @else {
+                    <span>Project</span>
+                }
+                </button>
         }
         
     </div>

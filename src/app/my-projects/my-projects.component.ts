@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener  } from '@angular/core';
 import { ProjectComponent } from "./project/project.component";
 
 @Component({
@@ -12,6 +12,7 @@ import { ProjectComponent } from "./project/project.component";
 export class MyProjectsComponent {
   activeButton: any = 0;
   triggerAnimation: boolean = false;
+  showTitle: boolean = window.innerWidth > 1200;
   projects: any = [
     { title: 'El pollo Loco',
       headline1:'About the project',
@@ -60,6 +61,10 @@ export class MyProjectsComponent {
   
   ];
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.showTitle = window.innerWidth > 900; // Dynamische Anpassung basierend auf Fensterbreite
+  }
  
   activateBtn(position: number) {
     this.triggerAnimation = false; // Animation zurücksetzen

@@ -4,7 +4,7 @@
             <div>
                 <img src="./../../../assets/img/bulletPoint.png" alt="">
                 <h3>{{ project.headline1 }}</h3>
-                <span>Duration: {{ project.duration }}</span>
+                <span class="duration durationPc">Duration: {{ project.duration }}</span>
             </div>
             <span [innerHTML]="project.description1"></span>
         </div>
@@ -22,16 +22,26 @@
             </div>
             <span [innerHTML]="project.description3"></span>
         </div>
+        <div class="projectLinks projectLinksSmartphone">
+            <a href="">Live Test</a>
+            <a href="">GitHub</a>
+        </div>
     </div>
     <div class="projectImgs">
-        <span>Technologies</span>
-        <div class="techImgOrder">
-            <img [src]="project.technologies[0]" alt="">
-            <img [src]="project.technologies[1]" alt="">
-            <img [src]="project.technologies[2]" alt="">
-        </div>
+        <h3 class="titleResponsive">{{ project.title }}</h3>
+        <div class="techResponsive">
+            <div class="technologies">
+                <span>Technologies</span>
+                <div class="techImgOrder">
+                    <img [src]="project.technologies[0]" alt="">
+                    <img [src]="project.technologies[1]" alt="">
+                    <img [src]="project.technologies[2]" alt="">
+                </div>
+            </div>
+            <span class="duration durationSmartphone">Duration: {{ project.duration }}</span>
+        </div>   
         <img [src]="project.img" alt="">
-        <div class="projectLinks">
+        <div class="projectLinks projectLinksPC">
             <a href="">Live Test</a>
             <a href="">GitHub</a>
         </div>

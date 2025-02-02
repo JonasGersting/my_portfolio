@@ -1,15 +1,18 @@
 <section>
     <h2>Looking for someone versatile?</h2>
-    <div class="presentationWrapper" >
-        @for  (element of presentation; track $index) {
-            <div class="background">
-                <div class="representationSection">
-                    <h3>{{element.title}}</h3>
-                    <span>{{element.text}}</span>
-                    <img [src]="element.img" alt="">
+    <div class="overflowWrapper">
+        <div class="presentationWrapper" >
+            @for  (element of presentation; track $index) {
+                <div class="background">
+                    <div class="representationSection">
+                        <h3>{{element.title}}</h3>
+                        <span>{{element.text}}</span>
+                        <img [src]="element.img" alt="">
+                    </div>
                 </div>
-            </div>
-        }
-       
+            }
+           
+        </div>
     </div>
+
 </section>
