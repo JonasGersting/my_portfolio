@@ -17,7 +17,7 @@ section {
 
         >h2 {
             @include setFont($family: 'Anta', $size: 54px, $weight: 400);
-            margin: 64px 0;
+            margin: 128px 0 48px 0;
             color: $primary_blue;
             text-align: center;
         }
