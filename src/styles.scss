@@ -28,8 +28,13 @@ $secondary_light_blue: #1F262B;
 }
 
 body {
-    overflow-x: hidden;
     background-color: $primary_dark_grey;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+    /* Optional, um sicherzustellen, dass die Seite komplett fixiert ist */
 }
 
 
@@ -49,3 +54,21 @@ body {
     background: white;
 }
 
+
+
+@media only screen and (max-width: 660px) {
+
+    /* Für moderne Browser */
+    body {
+        scrollbar-width: 0 !important;
+        /* Firefox */
+        -ms-overflow-style: 0 !important;
+        /* Internet Explorer 10+ */
+    }
+
+    /* Für WebKit-basierte Browser (Chrome, Edge, Safari) */
+    body::-webkit-scrollbar {
+        width: 0px !important;
+        /* Scrollbar ausblenden */
+    }
+}

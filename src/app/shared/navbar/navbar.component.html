@@ -28,3 +28,39 @@
         (click)="setLanguage('EN')">EN</button>
     </div>
 </div>
+
+<button (click)="toggleRespMenu()" class="responsiveMenuIcon">
+    <div class="responsiveMenuStripe"></div>
+    <div class="responsiveMenuStripe"></div>
+    <div class="responsiveMenuStripe"></div>
+</button>
+
+@if (menuOpen) {
+    <div class="menuOverlay" (click)="closeMenu()"></div>
+    <div class="responsiveMenu">
+        <div class="links">
+            <a href="#why-me"
+            [ngClass]="{'activeLink': selectedLink === 'whyMe'}"
+            (click)="setLink('whyMe')">Why me</a>
+            <a href="#skills"
+            [ngClass]="{'activeLink': selectedLink === 'skills'}"
+            (click)="setLink('skills')">Skills</a>
+            <a href="#my-projects"
+            [ngClass]="{'activeLink': selectedLink === 'projects'}"
+            (click)="setLink('projects')">Projects</a>
+            <a href="#contact"
+            [ngClass]="{'activeLink': selectedLink === 'contact'}"
+            (click)="setLink('contact')">Contact</a>
+        </div>
+        <div class="switchLangBtns">
+            <button 
+            [ngClass]="{'active': selectedLang === 'DE'}" 
+            (click)="setLanguage('DE')">DE</button>
+            <button
+            [ngClass]="{'active': selectedLang === 'EN'}" 
+            (click)="setLanguage('EN')">EN</button>
+        </div>
+    </div>
+}
+
+
