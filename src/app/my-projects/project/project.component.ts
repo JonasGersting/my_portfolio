@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core'; // Importiere Input
+import { Component, Input } from '@angular/core'; 
 
 @Component({
   selector: 'app-project',
@@ -9,10 +9,5 @@ import { Component, Input } from '@angular/core'; // Importiere Input
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
-  @Input() project: any; // Definiere das @Input-Property
-
-  ngOnInit(){
-    console.log(this.project);
-  }
-  
+  @Input() project: any; 
 }

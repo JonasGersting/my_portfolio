@@ -63,14 +63,14 @@ export class MyProjectsComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    this.showTitle = window.innerWidth > 900; // Dynamische Anpassung basierend auf Fensterbreite
+    this.showTitle = window.innerWidth > 900;
   }
  
   activateBtn(position: number) {
-    this.triggerAnimation = false; // Animation zurücksetzen
+    this.triggerAnimation = false; 
     setTimeout(() => {
       this.activeButton = position;
-      this.triggerAnimation = true; // Animation erneut starten
-    }, 50); // Verzögerung von 0ms, um den Zustand zu aktualisieren
+      this.triggerAnimation = true; 
+    }, 50); 
   }
 }

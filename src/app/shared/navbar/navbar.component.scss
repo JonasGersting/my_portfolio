@@ -6,6 +6,7 @@
 .links {
     @include orderElements($justify_content: space-between, $direction: row);
     width: 100%;
+    max-width: 800px;
 
     >a {
          @include orderElements();
@@ -96,7 +97,7 @@
     background-position: center;
     background-repeat: no-repeat;
     position: fixed;
-    top: 128px;
+    top: 20%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -117,6 +118,7 @@
     right: 32px;
     cursor: pointer;
     z-index: 1100;
+    will-change: transform, top, right;
     > div {
         background-color: $creme_white;
         width: 30px;
