@@ -18,7 +18,7 @@ section {
     overflow: hidden;
     background: none;
 
-    
+
     &::after {
         content: '';
         position: absolute;
@@ -28,8 +28,8 @@ section {
         height: 100%;
         background: url('./../../assets/img/backgroundProfilePic.png') no-repeat bottom;
         opacity: 1;
-        transition: opacity 1s ease-in-out; 
-        z-index: 1; 
+        transition: opacity 1s ease-in-out;
+        z-index: 1;
     }
 
     &::before {
@@ -42,18 +42,18 @@ section {
         background: url('./../../assets/img/backgroundProfilePicHover.png') no-repeat bottom;
         opacity: 0;
         transition: opacity 1s ease-in-out;
-        z-index: 2; 
+        z-index: 2;
     }
 
     &:hover::after {
-        opacity: 0; 
+        opacity: 0;
     }
 
     &:hover::before {
-        opacity: 1; 
+        opacity: 1;
     }
 
-    > img {
+    >img {
         width: 500px;
         max-width: 100%;
         z-index: 3;
@@ -64,7 +64,7 @@ section {
 
 
 
-.heroSectionRight{
+.heroSectionRight {
     @include orderElements();
 }
 
@@ -73,29 +73,36 @@ section {
     width: 100%;
 }
 
-.socialMedia{
+.socialMedia {
     @include orderElements();
-    > a {
+
+    >a {
         margin-bottom: 8px !important;
         width: 32px;
         height: 32px;
         background-image: url('./../../assets/img/githubDefault.png');
         background-position: center;
         background-repeat: no-repeat;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             background-image: url('./../../assets/img/githubDefault.png');
+
             &:hover {
                 background-image: url('./../../assets/img/githubHoverBlue.png');
             }
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
             background-image: url('./../../assets/img/emailDefault.png');
+
             &:hover {
                 background-image: url('./../../assets/img/emailHoverBlue.png');
             }
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             background-image: url('./../../assets/img/linkedinDefault.png');
+
             &:hover {
                 background-image: url('./../../assets/img/linkedinHoverBlue.png');
             }
@@ -103,10 +110,10 @@ section {
     }
 }
 
-.logoWithName{
-    @include orderElements($display: flex,);
+.logoWithName {
+    @include orderElements($display: flex, );
 
-    > span {
+    >span {
         &:nth-child(2) {
             @include setFont($family: 'anta', $size: 16px, $weight: 400);
             color: $creme_white;
@@ -119,50 +126,52 @@ section {
     }
 
     margin-bottom: 64px;
-    
+
 }
 
-.logoWithoutName{
+.logoWithoutName {
     @include orderElements($display: flex, $justify_content: space-around, $align_items: center, $direction: row);
     position: relative;
     width: 56px;
     height: 38px;
 
-    > span {
-        @include setFont($family: 'Roboto Mono', $size:16px, $weight: 400);
+    >span {
+        @include setFont($family: 'Roboto Mono', $size: 16px, $weight: 400);
         color: $creme_white;
         margin-bottom: 3px;
-        &:nth-child(1){
+
+        &:nth-child(1) {
             margin-right: 3px;
         }
 
-        &:nth-child(3){
+        &:nth-child(3) {
             margin-left: 3px;
             margin-right: 2px;
         }
     }
 
-    > img {
+    >img {
         position: absolute;
         transition: transform 0.3s ease;
 
-        &:hover{
-            transform: rotateY(180deg);        }
+        &:hover {
+            transform: rotateY(180deg);
+        }
     }
 
 }
 
 
-.headlineOrder{
-    @include orderElements($display: flex,);
+.headlineOrder {
+    @include orderElements($display: flex, );
 
-    > h1 {
+    >h1 {
         @include setFont($family: 'anta', $size: 88px, $weight: 400);
         color: $creme_white;
         margin-bottom: 16px;
     }
 
-    > h2{
+    >h2 {
         @include setFont($family: 'Josefin Sans', $size: 40px, $weight: 400);
         color: $creme_white;
     }
@@ -176,9 +185,80 @@ section {
     height: 100px;
     border-radius: 32px;
     transition: background-color 0.3s ease;
-    &:hover{
+
+    &:hover {
         background-color: #3F454A;
     }
 }
 
 
+@media only screen and (max-width: 1260px) {
+    section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .socialMediaWrapper {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+    }
+
+    .logoWithName {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+    }
+
+    .arrow {
+        margin: 48px 0 120px 0;
+    }
+
+
+}
+
+@media only screen and (max-width: 850px) {
+    .headlineOrder {
+        >h1 {
+            font-size: 48px;
+        }
+
+        >h2 {
+            font-size: 24px;
+        }
+    }
+
+    .profilePic {
+        margin-top: 80px;
+        width: 355px;
+        height: 370px;
+        background-image: url('./../../assets/img/ellipseHeroResponsive.png');
+        background-position: bottom;
+        background-repeat: no-repeat;
+
+        >img {
+            width: 266px;
+            height: 370px;
+        }
+
+
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 660px) {
+    .socialMediaWrapper {
+        display: none;
+    }
+
+    .arrow {
+        margin: 48px 0 0 0;
+    }
+}
