@@ -102,6 +102,10 @@ h2 {
         }
     }
 
+    .location {
+        margin-right: 0 !important;
+    }
+
     .orderLocAndText {
         align-items: center;
     }
@@ -121,7 +125,6 @@ h2 {
    .location{
     font-size: 16px;
     width: 300px;
-    margin-right: 0 !important;
     >img{
         width: 45px;
         height: 45px;
