@@ -1,20 +1,21 @@
 <section>
-    <h2>My Projects</h2>
+    <h2>{{ globalLanguage === 'DE' ? staticTexts.german.headline : staticTexts.english.headline }}</h2>
     <div>
-        @for  (element of projects; track $index) {
-            <button (click)="activateBtn($index)" [ngClass]="activeButton === $index ? 'activeBtn' : 'inactiveBtn'">{{ $index+ 1 }}.
+        @for (element of (globalLanguage === 'DE' ? projectsGerman : projectsEnglish); track $index) {
+            <button (click)="activateBtn($index)" [ngClass]="activeButton === $index ? 'activeBtn' : 'inactiveBtn'">{{ $index + 1 }}.
                 @if (showTitle) {
                     <span>{{ element.title }}</span>
                 } @else {
-                    <span>Project</span>
+                    <span>{{ globalLanguage === 'DE' ? staticTexts.german.project : staticTexts.english.project }}</span>
                 }
-                </button>
+            </button>
         }
+        
         
     </div>
     <div class="appProjectWrapper" >
         @if (activeButton !== null) {
-            <app-project [project]="projects[activeButton]" [ngClass]="{'active': activeButton !== null, 'animate': triggerAnimation}" ></app-project>
+            <app-project [project]="globalLanguage === 'DE' ? projectsGerman[activeButton] : projectsEnglish[activeButton]"  [ngClass]="{'active': activeButton !== null, 'animate': triggerAnimation}" ></app-project>
             }
     </div>
 

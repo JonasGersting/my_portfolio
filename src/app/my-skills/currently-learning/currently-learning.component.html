@@ -1,7 +1,7 @@
 <div class="background">
-    <h3>What I am currently learning</h3>
+    <h3>{{ globalLanguage === 'DE' ? staticTexts.german.head : staticTexts.english.head }}</h3>
     <div class="currentlyLearningSection">
-        <span>I am currently learning</span>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.subHead : staticTexts.english.subHead }}</span>
         <div>
             <div>
                 <img src="./../../../assets/img/react.png" alt="">
@@ -12,8 +12,11 @@
                 <span class="size14">VUE JS</span>
             </div>
         </div>
-        <span class="motivation">Staying motivated to expand my IT<br> skills requires a strategic approach, a<br> curious mindset, and a commitment <br> to lifelong learning.</span>
-        <span class="motivationResponsive">Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.</span>
+        <span class="motivation">{{ globalLanguage === 'DE' ? staticTexts.german.motivation2[0] : staticTexts.english.motivation2[0] }}<br>
+            {{ globalLanguage === 'DE' ? staticTexts.german.motivation2[1] : staticTexts.english.motivation2[1] }}<br> 
+            {{ globalLanguage === 'DE' ? staticTexts.german.motivation2[2] : staticTexts.english.motivation2[2] }} <br> 
+            {{ globalLanguage === 'DE' ? staticTexts.german.motivation2[3] : staticTexts.english.motivation2[3] }}</span>
+        <span class="motivationResponsive">{{ globalLanguage === 'DE' ? staticTexts.german.motivation : staticTexts.english.motivation }}</span>
     </div>
 </div>
 

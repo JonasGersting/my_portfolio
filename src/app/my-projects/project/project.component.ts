@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core'; 
+import { SetLanguageService } from '../../set-language.service';
 
 @Component({
   selector: 'app-project',
@@ -9,5 +10,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
+  globalLanguage: string = 'DE';
+  constructor(private languageService: SetLanguageService) {
+    this.languageService.language$.subscribe(lang => {
+      this.globalLanguage = lang;
+    });
+  }
   @Input() project: any; 
 }

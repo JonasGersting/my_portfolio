@@ -1,6 +1,6 @@
 <section>
   <div class="headlineContact">
-    <h2>Contact me</h2>
+    <h2>{{ globalLanguage === 'DE' ? staticTexts.german.headline : staticTexts.english.headline }}</h2>
     <a href="#hero">
       <svg class="rotate180" width="22" height="50" viewBox="0 0 22 50" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -10,9 +10,7 @@
     </a>
   </div>
   <div class="interestedWrapper">
-    <span class="interested">Still not sure if I am the right person for your project? Lorem ipsum dolor sit amet
-      consectetur adipisicing elit. Tenetur aliquam cum, ipsum asperiores at excepturi explicabo rerum. Mollitia
-      eos distinctio illo! Est beatae dolore sint expedita, tenetur dolorem odio reiciendis.</span>
+    <span class="interested">{{ globalLanguage === 'DE' ? staticTexts.german.text : staticTexts.english.text }}</span>
     <a href="mailto:jonasgersting@web.de">
       <div class="icon"></div>E-mail: jonasgersting&#64;web.de
     </a>
@@ -23,14 +21,14 @@
         <input class="inputSmall" type="text" id="name" placeholder=" " name="yourName" [(ngModel)]="yourName"
           #name="ngModel" required>
         <label for="name" [ngClass]="{'invalid-label': name.invalid && name.touched}">{{ name.invalid && name.touched ?
-          labelNameError : labelName }}</label>
+          ( globalLanguage === 'DE' ? staticTexts.german.labelNameError : staticTexts.english.labelNameError ) : ( globalLanguage === 'DE' ? staticTexts.german.labelName : staticTexts.english.labelName ) }}</label>
       </div>
 
       <div class="form-group">
         <input class="inputSmall" type="text" id="mail" placeholder=" " name="yourMail" [(ngModel)]="yourMail"
           #mail="ngModel" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
         <label class="mailLabel" for="mail" [ngClass]="{'invalid-label': mail.invalid && mail.touched}">{{ mail.invalid && mail.touched ?
-          labelMailError : labelMail }}</label>
+          ( globalLanguage === 'DE' ? staticTexts.german.labelMailError : staticTexts.english.labelMailError ) : ( globalLanguage === 'DE' ? staticTexts.german.labelMail : staticTexts.english.labelMail ) }}</label>
       </div>
     </div>
 
@@ -38,7 +36,7 @@
       <textarea id="message" placeholder=" " name="yourMessage" [(ngModel)]="yourMessage" #message="ngModel" required
         pattern=".{10,}"></textarea>
       <label for="message" [ngClass]="{'invalid-label': message.invalid && message.touched}">{{ message.invalid &&
-        message.touched ? labelMessageError : labelMessage }}</label>
+        message.touched ? ( globalLanguage === 'DE' ? staticTexts.german.labelMessageError : staticTexts.english.labelMessageError ) : ( globalLanguage === 'DE' ? staticTexts.german.labelMsg : staticTexts.english.labelMsg ) }}</label>
     </div>
 
     <div class="privacyPolicyCheckbox">
@@ -48,7 +46,8 @@
         <label for="privacyCheckbox"></label>
       </div>
 
-      <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</span>
+      <span> {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol1 : staticTexts.english.privacyPol1 }} <a href="">{{ globalLanguage === 'DE' ? staticTexts.german.privacyPolLink : staticTexts.english.privacyPolLink }} </a>
+        {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol2 : staticTexts.english.privacyPol2 }}</span>
     </div>
 
     <div class="sendWrapper">

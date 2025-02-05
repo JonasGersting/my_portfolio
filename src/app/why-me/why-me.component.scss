@@ -14,6 +14,7 @@ h2 {
     color: $primary_blue;
     margin-top: 128px;
     margin-bottom: 48px;
+    text-align: center;
 }
 
 .orderLocAndText {
@@ -25,7 +26,7 @@ h2 {
     @include orderElements($direction: row);
     @include setFont($family: 'Josefin Sans', $weight: 700, $size: 30px);
     margin-right: 64px;
-    width: 500px;
+    width: 600px;
     height: 64px;
 
     >img {
@@ -62,7 +63,6 @@ h2 {
     color: $creme_white;
     max-width: 380px;
     width: 100%;
-    height: 180px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
@@ -121,15 +121,20 @@ h2 {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
    .location{
-    font-size: 16px;
-    width: 300px;
+    font-size: 14px;
+    width: 320px;
     >img{
-        width: 45px;
-        height: 45px;
+        width: 32px;
+        height: 32px;
     }
    }
+   .whoAmI {
+    height: auto;
+    margin-top: 24px;
+    font-size: 16px;
+}
 }
 
 @media only screen and (max-width: 660px) {

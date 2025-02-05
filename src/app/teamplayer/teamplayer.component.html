@@ -1,8 +1,8 @@
 <section>
-    <h2>Looking for someone versatile?</h2>
+    <h2>{{globalLanguage === 'DE' ? headline.german : headline.english}}</h2>
     <div class="overflowWrapper">
         <div class="presentationWrapper" >
-            @for  (element of presentation; track $index) {
+            @for  (element of (globalLanguage === 'DE' ? presentation.german : presentation.english); track $index) {
                 <div class="background">
                     <div class="representationSection">
                         <h3>{{element.title}}</h3>

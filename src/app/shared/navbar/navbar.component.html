@@ -8,23 +8,23 @@
     <div class="links">
         <a href="#why-me"
         [ngClass]="{'activeLink': selectedLink === 'whyMe'}"
-        (click)="setLink('whyMe')">Why me</a>
+        (click)="setLink('whyMe')">{{ globalLanguage === 'DE' ? language.german.whyMe : language.english.whyMe }}</a>
         <a href="#skills"
         [ngClass]="{'activeLink': selectedLink === 'skills'}"
-        (click)="setLink('skills')">Skills</a>
+        (click)="setLink('skills')">{{ globalLanguage === 'DE' ? language.german.skills : language.english.skills }}</a>
         <a href="#my-projects"
         [ngClass]="{'activeLink': selectedLink === 'projects'}"
-        (click)="setLink('projects')">Projects</a>
+        (click)="setLink('projects')">{{ globalLanguage === 'DE' ? language.german.projects : language.english.projects }}</a>
         <a href="#contact"
         [ngClass]="{'activeLink': selectedLink === 'contact'}"
-        (click)="setLink('contact')">Contact</a>
+        (click)="setLink('contact')">{{ globalLanguage === 'DE' ? language.german.contact : language.english.contact }}</a>
     </div>
     <div class="switchLangBtns">
         <button 
-        [ngClass]="{'active': selectedLang === 'DE'}" 
+        [ngClass]="{'active': globalLanguage === 'DE'}" 
         (click)="setLanguage('DE')">DE</button>
         <button
-        [ngClass]="{'active': selectedLang === 'EN'}" 
+        [ngClass]="{'active': globalLanguage === 'EN'}" 
         (click)="setLanguage('EN')">EN</button>
     </div>
 </div>
@@ -41,23 +41,23 @@
     <div class="links">
         <a href="#why-me"
         [ngClass]="{'activeLink': selectedLink === 'whyMe'}"
-        (click)="setLink('whyMe')">Why me</a>
+        (click)="setLink('whyMe')">{{ globalLanguage === 'DE' ? language.german.whyMe : language.english.whyMe }}</a>
         <a href="#skills"
         [ngClass]="{'activeLink': selectedLink === 'skills'}"
-        (click)="setLink('skills')">Skills</a>
+        (click)="setLink('skills')">{{ globalLanguage === 'DE' ? language.german.skills : language.english.skills }}</a>
         <a href="#my-projects"
         [ngClass]="{'activeLink': selectedLink === 'projects'}"
-        (click)="setLink('projects')">Projects</a>
+        (click)="setLink('projects')">{{ globalLanguage === 'DE' ? language.german.projects : language.english.projects }}</a>
         <a href="#contact"
         [ngClass]="{'activeLink': selectedLink === 'contact'}"
-        (click)="setLink('contact')">Contact</a>
+        (click)="setLink('contact')">{{ globalLanguage === 'DE' ? language.german.contact : language.english.contact }}</a>
     </div>
     <div class="switchLangBtns">
         <button 
-        [ngClass]="{'active': selectedLang === 'DE'}" 
+        [ngClass]="{'active': globalLanguage === 'DE'}" 
         (click)="setLanguage('DE')">DE</button>
         <button
-        [ngClass]="{'active': selectedLang === 'EN'}" 
+        [ngClass]="{'active': globalLanguage === 'EN'}" 
         (click)="setLanguage('EN')">EN</button>
     </div>
 </div>

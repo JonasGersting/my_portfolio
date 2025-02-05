@@ -1,25 +1,48 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SetLanguageService } from '../../set-language.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [ CommonModule],
+  imports: [ CommonModule ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  selectedLang: string = 'DE';
+  globalLanguage: string = 'DE';
   selectedLink: string = '';
   menuOpen: boolean = false;
 
+  language: any = {
+    "english": {
+      "whyMe": "Why me",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "german": {
+      "whyMe": "Warum mich",
+      "skills": "Fähigkeiten",
+      "projects": "Projekte",
+      "contact": "Kontakt"
+    }
+  }
+  
+
+  constructor(private languageService: SetLanguageService) {
+    this.languageService.language$.subscribe(lang => {
+      this.globalLanguage = lang;
+    });
+  }
+
   setLanguage(lang: string): void {
-    this.selectedLang = lang;
+    this.languageService.switchLanguage(lang);
   }
 
   setLink(link: string): void {
     this.selectedLink = link;
-    this.closeMenu(); // Menü schließen
+    this.closeMenu();
   }
 
   toggleRespMenu(): void {

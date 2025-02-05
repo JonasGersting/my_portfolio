@@ -73,7 +73,7 @@ section {
 }
 
 .representationSection {
-    @include orderElements();
+    @include orderElements($justify_content: space-evenly);
 
     color: $creme_white;
     padding: 16px;
@@ -92,6 +92,7 @@ section {
         @include setFont($size: 18px, $family: 'Josefin Sans', $weight: 400);
         margin-top: 24px;
         margin-bottom: 32px;
+        width: 280px;
     }
 
 }

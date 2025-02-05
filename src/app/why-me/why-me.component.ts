@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { SetLanguageService } from './../set-language.service';
 
 @Component({
   selector: 'app-why-me',
@@ -9,11 +10,35 @@ import { Component } from '@angular/core';
   styleUrls: ['./why-me.component.scss']
 })
 export class WhyMeComponent {
-  texts = [
-    { icon: 'assets/img/location.png', prefix: 'I am ', text: 'located in Offenbach', end: '...', cursor: '|' },
-    { icon: 'assets/img/remote.png', prefix: 'I am ', text: 'open to work remote', end: '...', cursor: '|' },
-    { icon: 'assets/img/relocate.png', prefix: 'I am ', text: 'open to relocate', end: '...', cursor: '|' }
-  ];
+
+  globalLanguage: string = 'DE';
+  staticTexts = {
+    "english":{
+      "headline": "Why me",
+      "motivation": "I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member for your team.",
+      "contact": "Let's talk"
+    },
+    "german": {
+        "headline": "Warum mich",
+        "motivation": "Ich bin motiviert, ständig neue Technologien zu lernen und mich weiterzuentwickeln. Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für Programmierung machen mich zu einem wertvollen Mitglied für Ihr Team.",
+        "contact": "Jetzt anfragen"
+    }
+  }
+  texts =
+    {
+      "english": [
+        { "icon": "assets/img/location.png", "prefix": "I am ", "text": "located in Offenbach", "end": "...", "cursor": "|" },
+        { "icon": "assets/img/remote.png", "prefix": "I am ", "text": "open to work remote", "end": "...", "cursor": "|" },
+        { "icon": "assets/img/relocate.png", "prefix": "I am ", "text": "open to relocate", "end": "...", "cursor": "|" }
+      ],
+      "german": [
+        { "icon": "assets/img/location.png", "prefix": "Ich komme ", "text": "aus Offenbach", "end": "...", "cursor": "|" },
+        { "icon": "assets/img/remote.png", "prefix": "Ich bin ", "text": "bereit, remote zu arbeiten", "end": "...", "cursor": "|" },
+        { "icon": "assets/img/relocate.png", "prefix": "Ich bin ", "text": "bereit, umzuziehen", "end": "...", "cursor": "|" }
+      ]
+    }
+
+
 
   transparent: string = 'transparent';
   isTransparent = true;
@@ -25,6 +50,12 @@ export class WhyMeComponent {
   currentIndex = 0;
   private typingSpeed = 100;
   private pauseTime = 2000;
+
+  constructor(private languageService: SetLanguageService) {
+    this.languageService.language$.subscribe(lang => {
+      this.globalLanguage = lang;
+    });
+  }
 
   ngOnInit(): void {
     this.startTypingAnimation();
@@ -42,11 +73,21 @@ export class WhyMeComponent {
     }, 400);
   }
 
+  returnCorrectLang() {
+    let selectetLangTexts;
+    if (this.globalLanguage === 'DE') {
+      return selectetLangTexts = this.texts.german;
+    } else {
+      return selectetLangTexts = this.texts.english;
+    }
+  }
+
   startTypingAnimation(): void {
-    this.currentIcon = this.texts[this.currentIndex].icon;
+    let selectetLangTexts = this.returnCorrectLang();
+    this.currentIcon = selectetLangTexts[this.currentIndex].icon;
     this.resetTextFields();
     this.typeIcon(() => {
-      this.typePrefixAndText(this.texts[this.currentIndex].prefix, this.texts[this.currentIndex].text, () => {
+      this.typePrefixAndText(selectetLangTexts[this.currentIndex].prefix, selectetLangTexts[this.currentIndex].text, () => {
         this.updateEndFixAndCursor();
         this.toggleTransparency();
         setTimeout(() => this.deleteText(() => this.switchToNextText()), this.pauseTime);
@@ -61,7 +102,8 @@ export class WhyMeComponent {
   }
 
   typeIcon(callback: () => void): void {
-    this.currentIcon = this.texts[this.currentIndex].icon;
+    let selectetLangTexts = this.returnCorrectLang();
+    this.currentIcon = selectetLangTexts[this.currentIndex].icon;
     setTimeout(callback, this.typingSpeed);
   }
 
@@ -83,8 +125,9 @@ export class WhyMeComponent {
   }
 
   updateEndFixAndCursor(): void {
-    this.endFix = this.texts[this.currentIndex].end;
-    this.cursor = this.texts[this.currentIndex].cursor;
+    let selectetLangTexts = this.returnCorrectLang();
+    this.endFix = selectetLangTexts[this.currentIndex].end;
+    this.cursor = selectetLangTexts[this.currentIndex].cursor;
   }
 
   deleteText(callback: () => void): void {
@@ -105,10 +148,11 @@ export class WhyMeComponent {
   }
 
   switchToNextText(): void {
-    this.currentIndex = (this.currentIndex + 1) % this.texts.length;
+    let selectetLangTexts = this.returnCorrectLang();
+    this.currentIndex = (this.currentIndex + 1) % selectetLangTexts.length;
     this.currentIcon = '';
-    
-      this.startTypingAnimation();
-    
+
+    this.startTypingAnimation();
+
   }
 }

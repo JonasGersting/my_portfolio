@@ -1,15 +1,15 @@
 
 <section>
-    <h2>Why me</h2>
+    <h2>{{ globalLanguage === 'DE' ? staticTexts.german.headline : staticTexts.english.headline }}</h2>
     <div class="orderLocAndText">
         <div class="location">
             <img [src]="currentIcon" alt="">
             <span>{{ prefixText }}</span><span>{{ displayedText }}</span><span>{{ endFix }}</span><span [ngClass]="{ 'transparent': isTransparent }">{{ cursor }}</span>
         </div>
         <div class="whoAmI">
-            <span>I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make me a valuable member for your team.</span>
+            <span>{{ globalLanguage === 'DE' ? staticTexts.german.motivation : staticTexts.english.motivation }}</span>
             <div>
-                <a href="#contact">Let's talk</a>
+                <a href="#contact">{{ globalLanguage === 'DE' ? staticTexts.german.contact : staticTexts.english.contact }}</a>
             </div>
         </div>
     </div>
