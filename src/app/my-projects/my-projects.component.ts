@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener  } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ProjectComponent } from "./project/project.component";
 import { SetLanguageService } from './../set-language.service';
 
@@ -15,7 +15,7 @@ export class MyProjectsComponent {
   globalLanguage: string = 'DE';
   staticTexts = {
     english: {
-      headline:'My Projects',
+      headline: 'My Projects',
       project: 'Project'
     },
     german: {
@@ -27,99 +27,107 @@ export class MyProjectsComponent {
   triggerAnimation: boolean = false;
   showTitle: boolean = window.innerWidth > 1200;
   projectsGerman: any = [
-    { title: 'El pollo Loco',
-      headline1:'Über das Projekt',
-      description1: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.', 
+    {
+      title: 'El pollo Loco',
+      headline1: 'Über das Projekt',
+      description1: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.',
       duration: '3 Wochen',
-      headline2: 'Wie ich meine Arbeite strukturiert habe', 
+      headline2: 'Wie ich meine Arbeite strukturiert habe',
       description2: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.',
       headline3: 'Meine Erfahrung',
       description3: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
       img: './../../assets/img/elPolloLocoScreenshot.PNG'
     },
-    { title: 'Join',
-      headline1:'Über das Projekt',
-      description1: 'A spicy chicken restaurant app', 
+    {
+      title: 'Join',
+      headline1: 'Über das Projekt',
+      description1: 'A spicy chicken restaurant app',
       duration: '3 Weeks',
-      headline2: 'How I have organised my work', 
+      headline2: 'How I have organised my work',
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Firebase.png'],
       img: './../../assets/img/screenshotProject.png'
     },
-    { title: 'Ring of Fire',
-      headline1:'Über das Projekt',
-      description1: 'A spicy chicken restaurant app', 
+    {
+      title: 'Ring of Fire',
+      headline1: 'Über das Projekt',
+      description1: 'A spicy chicken restaurant app',
       duration: '3 Weeks',
-      headline2: 'How I have organised my work', 
+      headline2: 'How I have organised my work',
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Angular.png', './../../assets/img/Firebase.png'],
       img: './../../assets/img/screenshotProject.png'
     },
-    { title: 'Pokedex',
-      headline1:'Über das Projekt',
-      description1: 'A spicy chicken restaurant app', 
+    {
+      title: 'Pokedex',
+      headline1: 'Über das Projekt',
+      description1: 'A spicy chicken restaurant app',
       duration: '3 Weeks',
-      headline2: 'How I have organised my work', 
+      headline2: 'How I have organised my work',
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Api.png'],
       img: './../../assets/img/pokedexScreenshot.PNG'
     },
-  
+
   ];
 
   projectsEnglish: any = [
-    { title: 'El pollo Loco',
-      headline1:'About the project',
-      description1: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.', 
+    {
+      title: 'El pollo Loco',
+      headline1: 'About the project',
+      description1: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.',
       duration: '3 Weeks',
-      headline2: 'How I have organised my work', 
+      headline2: 'How I have organised my work',
       description2: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.',
       headline3: ' My group work experience',
       description3: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
-      img: './../../assets/img/screenshotProject.png'
+      img: './../../assets/img/elPolloLocoScreenshot.PNG'
     },
-    { title: 'Join',
-      headline1:'About the project',
-      description1: 'A spicy chicken restaurant app', 
+    {
+      title: 'Join',
+      headline1: 'About the project',
+      description1: 'A spicy chicken restaurant app',
       duration: '3 Weeks',
-      headline2: 'How I have organised my work', 
+      headline2: 'How I have organised my work',
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
       img: './../../assets/img/screenshotProject.png'
     },
-    { title: 'Ring of Fire',
-      headline1:'About the project',
-      description1: 'A spicy chicken restaurant app', 
+    {
+      title: 'Ring of Fire',
+      headline1: 'About the project',
+      description1: 'A spicy chicken restaurant app',
       duration: '3 Weeks',
-      headline2: 'How I have organised my work', 
+      headline2: 'How I have organised my work',
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
       img: './../../assets/img/screenshotProject.png'
     },
-    { title: 'Ring of Fire',
-      headline1:'About the project',
-      description1: 'A spicy chicken restaurant app', 
+    {
+      title: 'Pokedex',
+      headline1: 'About the project',
+      description1: 'A spicy chicken restaurant app',
       duration: '3 Weeks',
-      headline2: 'How I have organised my work', 
+      headline2: 'How I have organised my work',
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
-      technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
-      img: './../../assets/img/screenshotProject.png'
+      technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Api.png'],
+      img: './../../assets/img/pokedexScreenshot.PNG'
     },
-  
+
   ];
   constructor(private languageService: SetLanguageService) {
     this.languageService.language$.subscribe(lang => {
@@ -131,12 +139,12 @@ export class MyProjectsComponent {
   onResize(event: Event) {
     this.showTitle = window.innerWidth > 900;
   }
- 
+
   activateBtn(position: number) {
-    this.triggerAnimation = false; 
+    this.triggerAnimation = false;
     setTimeout(() => {
       this.activeButton = position;
-      this.triggerAnimation = true; 
-    }, 50); 
+      this.triggerAnimation = true;
+    }, 50);
   }
 }

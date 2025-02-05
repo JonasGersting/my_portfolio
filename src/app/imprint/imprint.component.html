@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<section>
+    <div>
+        <h2>{{ globalLanguage === 'DE' ? staticTexts.german.headline : staticTexts.english.headline }}</h2>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.tmg[0] : staticTexts.english.tmg[0] }}</h3>
+        <span>
+            {{ globalLanguage === 'DE' ? staticTexts.german.tmg[1] : staticTexts.english.tmg[1] }}<br>
+            {{ globalLanguage === 'DE' ? staticTexts.german.tmg[2] : staticTexts.english.tmg[2] }}<br>
+            {{ globalLanguage === 'DE' ? staticTexts.german.tmg[3] : staticTexts.english.tmg[3] }}<br>
+            {{ globalLanguage === 'DE' ? staticTexts.german.tmg[4] : staticTexts.english.tmg[4] }}<br>
+        </span>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.contactHead : staticTexts.english.contactHead }}</h3>
+        <span>E-Mail:<a href="mailto:jonasgersting@web.de"> jonasgersting&#64;web.de</a></span>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.disclaimer[0] : staticTexts.english.disclaimer[0] }}</h3>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.disclaimer[1] : staticTexts.english.disclaimer[1] }}</span>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.liabilityForLinks[0] : staticTexts.english.liabilityForLinks[0]
+            }}</h3>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.liabilityForLinks[1] :
+            staticTexts.english.liabilityForLinks[1] }}</span>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.copyright[0] : staticTexts.english.copyright[0] }}</h3>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.copyright[1] : staticTexts.english.copyright[1] }}</span>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.liability[0] : staticTexts.english.liability[0] }}</h3>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.liability[1] : staticTexts.english.liability[1] }}</span>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.governingLaw[0] : staticTexts.english.governingLaw[0] }}</h3>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.governingLaw[1] : staticTexts.english.governingLaw[1]
+            }}</span>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.ChangesLegalNotice[0] :
+            staticTexts.english.ChangesLegalNotice[0] }}</h3>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.ChangesLegalNotice[1] :
+            staticTexts.english.ChangesLegalNotice[1] }}</span>
+        <h3>{{ globalLanguage === 'DE' ? staticTexts.german.privacy[0] : staticTexts.english.privacy[0] }}</h3>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.privacy[1] : staticTexts.english.privacy[1] }}</span> <a
+            href=""> {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol : staticTexts.english.privacyPol }}.</a>
+    </div>
+   
+</section>

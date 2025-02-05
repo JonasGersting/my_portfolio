@@ -1,0 +1,50 @@
+@import './../../styles.scss';
+@import './../../allFont.scss';
+
+section {
+    @include orderElements();
+    padding: 32px 32px 0 32px;
+
+    >div {
+        max-width: 1000px;
+        width: 100%;
+        margin-bottom: 64px;
+
+        color: $creme_white;
+        @include setFont($family: 'Josefin Sans', $size: 24px, $weight: 400);
+
+        >h2 {
+            font-size: 64px;
+            margin-bottom: 32px;
+        }
+
+        >h3 {
+            color: $primary_blue;
+            margin-bottom: 32px;
+            margin-top: 64px;
+        }
+
+        >span {
+            line-height: 30px;
+
+            >a {
+                text-decoration: none;
+                color: $primary_blue;
+
+                &:hover {
+                    color: $creme_white;
+                }
+            }
+        }
+
+        >a {
+            text-decoration: none;
+            color: $primary_blue;
+
+            &:hover {
+                color: $creme_white;
+            }
+        }
+    }
+
+}
