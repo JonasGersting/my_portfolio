@@ -4,7 +4,7 @@
             <div>
                 <img src="./../../../assets/img/bulletPoint.png" alt="">
                 <h3>{{ project.headline1 }}</h3>
-                <span class="duration durationPc">Duration: {{ project.duration }}</span>
+                <span class="duration durationPc">{{ globalLanguage === 'DE' ? duration.german : duration.english }} {{ project.duration }}</span>
             </div>
             <span [innerHTML]="project.description1"></span>
         </div>
@@ -33,9 +33,9 @@
             <div class="technologies">
                 <span>Technologies</span>
                 <div class="techImgOrder">
-                    <img [src]="project.technologies[0]" alt="">
-                    <img [src]="project.technologies[1]" alt="">
-                    <img [src]="project.technologies[2]" alt="">
+                    @for (img of project.technologies; track $index) {
+                        <img [src]= "img" alt="">
+                    }
                 </div>
             </div>
             <span class="duration durationSmartphone">Duration: {{ project.duration }}</span>

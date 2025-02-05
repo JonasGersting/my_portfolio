@@ -36,40 +36,40 @@ export class MyProjectsComponent {
       headline3: 'Meine Erfahrung',
       description3: 'This App is a Slack Clone App. <br> It revolutionizes team communication and collaboratin with its intuitive <br> interface, real-time messaging, and robust channel organization.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
-      img: './../../assets/img/screenshotProject.png'
+      img: './../../assets/img/elPolloLocoScreenshot.PNG'
     },
     { title: 'Join',
-      headline1:'Join',
+      headline1:'Über das Projekt',
       description1: 'A spicy chicken restaurant app', 
       duration: '3 Weeks',
       headline2: 'How I have organised my work', 
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
-      technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
+      technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Firebase.png'],
       img: './../../assets/img/screenshotProject.png'
     },
     { title: 'Ring of Fire',
-      headline1:'Ring of Fire',
+      headline1:'Über das Projekt',
       description1: 'A spicy chicken restaurant app', 
       duration: '3 Weeks',
       headline2: 'How I have organised my work', 
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
-      technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
+      technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Angular.png', './../../assets/img/Firebase.png'],
       img: './../../assets/img/screenshotProject.png'
     },
-    { title: 'Ring of Fire',
-      headline1:'Ring of Fire',
+    { title: 'Pokedex',
+      headline1:'Über das Projekt',
       description1: 'A spicy chicken restaurant app', 
       duration: '3 Weeks',
       headline2: 'How I have organised my work', 
       description2: 'lorem ipsum etcs fsdjfklsd',
       headline3: ' My group work experience',
       description3: 'asldfkjsldjflösadfjsldfj',
-      technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
-      img: './../../assets/img/screenshotProject.png'
+      technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Api.png'],
+      img: './../../assets/img/pokedexScreenshot.PNG'
     },
   
   ];
@@ -87,7 +87,7 @@ export class MyProjectsComponent {
       img: './../../assets/img/screenshotProject.png'
     },
     { title: 'Join',
-      headline1:'Join',
+      headline1:'About the project',
       description1: 'A spicy chicken restaurant app', 
       duration: '3 Weeks',
       headline2: 'How I have organised my work', 
@@ -98,7 +98,7 @@ export class MyProjectsComponent {
       img: './../../assets/img/screenshotProject.png'
     },
     { title: 'Ring of Fire',
-      headline1:'Ring of Fire',
+      headline1:'About the project',
       description1: 'A spicy chicken restaurant app', 
       duration: '3 Weeks',
       headline2: 'How I have organised my work', 
@@ -109,7 +109,7 @@ export class MyProjectsComponent {
       img: './../../assets/img/screenshotProject.png'
     },
     { title: 'Ring of Fire',
-      headline1:'Ring of Fire',
+      headline1:'About the project',
       description1: 'A spicy chicken restaurant app', 
       duration: '3 Weeks',
       headline2: 'How I have organised my work', 

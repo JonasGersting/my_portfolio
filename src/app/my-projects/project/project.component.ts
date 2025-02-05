@@ -11,6 +11,10 @@ import { SetLanguageService } from '../../set-language.service';
 })
 export class ProjectComponent {
   globalLanguage: string = 'DE';
+  duration = {
+    english: 'Duration:',
+    german: 'Dauer:'
+  }
   constructor(private languageService: SetLanguageService) {
     this.languageService.language$.subscribe(lang => {
       this.globalLanguage = lang;
