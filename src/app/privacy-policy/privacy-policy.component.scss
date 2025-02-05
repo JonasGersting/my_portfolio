@@ -1,6 +1,11 @@
 @import './../../styles.scss';
 @import './../../allFont.scss';
 
+app-navbar {
+    position: sticky;
+    top: 0;
+}
+
 section {
     @include orderElements();
     padding: 32px 32px 0 32px;
@@ -30,6 +35,7 @@ section {
             margin-top: 8px;
             margin-bottom: 8px;
             display: block;
+
             >a {
                 text-decoration: none;
                 color: $primary_blue;

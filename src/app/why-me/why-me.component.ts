@@ -19,7 +19,7 @@ export class WhyMeComponent {
       "contact": "Let's talk"
     },
     "german": {
-        "headline": "Warum mich",
+        "headline": "Warum ich",
         "motivation": "Ich bin motiviert, ständig neue Technologien zu lernen und mich weiterzuentwickeln. Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für Programmierung machen mich zu einem wertvollen Mitglied für Ihr Team.",
         "contact": "Jetzt anfragen"
     }
