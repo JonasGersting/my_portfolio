@@ -340,8 +340,8 @@ textarea.ng-invalid.ng-touched {
 }
 
 @media only screen and (max-width: 380px) {
-    .mailLabel {
-        width: 200px;
+    label {
+        font-size: 14px !important;
     }
 }
 

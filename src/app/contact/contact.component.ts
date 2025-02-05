@@ -36,7 +36,7 @@ export class ContactComponent {
       labelMsg: 'Ihre Nachricht',
       labelNameError: 'Ihr Name ist erforderlich',
       labelMailError: 'Ihre E-Mailadresse ist erforderlich',
-      labelMessageError: 'Ihre Nachricht hat weniger als 10 Zeichen',
+      labelMessageError: 'Ihre Nachricht ist zu kurz',
       privacyPol1: `Ich habe die`,
       privacyPolLink: 'Datenschutzrichtlinie',
       privacyPol2: ' gelesen und stimme der oben beschriebenen Verarbeitung meiner Daten zu.',
