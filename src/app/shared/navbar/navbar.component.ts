@@ -117,6 +117,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   private updateSelectedLinkBasedOnScroll(): void {
     const sections = [
+      { id: 'hero', link: '' },
       { id: 'why-me', link: 'whyMe' },
       { id: 'skills', link: 'skills' },
       { id: 'my-projects', link: 'projects' },

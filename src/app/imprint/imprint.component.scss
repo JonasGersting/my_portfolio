@@ -19,7 +19,7 @@ section {
         @include setFont($family: 'Josefin Sans', $size: 24px, $weight: 400);
 
         >h2 {
-            font-size: 64px;
+            font-size: 48px;
             margin-bottom: 32px;
             margin-top: 48px;
         }
@@ -32,7 +32,7 @@ section {
 
         >span {
             line-height: 30px;
-
+            word-break: break-word;
             >a {
                 text-decoration: none;
                 color: $primary_blue;
@@ -53,4 +53,11 @@ section {
         }
     }
 
+}
+
+
+@media only screen and (max-width: 600px) {
+    div {
+        font-size: 16px !important;
+    }
 }

@@ -43,15 +43,20 @@
       <div>
         <input class="checkbox" type="checkbox" id="privacyCheckbox" [(ngModel)]="isPrivacyPolicyChecked"
           name="privacyCheckbox">
-        <label for="privacyCheckbox"></label>
+        <label for="privacyCheckbox"></label> 
       </div>
+     
 
       <span> {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol1 : staticTexts.english.privacyPol1 }} <a href="privacyPolicy">{{ globalLanguage === 'DE' ? staticTexts.german.privacyPolLink : staticTexts.english.privacyPolLink }} </a>
         {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol2 : staticTexts.english.privacyPol2 }}</span>
     </div>
-
+    <div class="privacyError">
+      @if (!isPrivacyPolicyChecked) {
+        <label for="privacyCheckbox">{{ globalLanguage === 'DE' ? staticTexts.german.privacyError : staticTexts.english.privacyError }}</label>
+      }
+    </div>
     <div class="sendWrapper">
-      <button type="submit" [disabled]="!isPrivacyPolicyChecked">Send</button>
+      <button type="submit" [disabled]="!isFormValid()">Send</button>
     </div>
   </form>
   <div class="heroLinkResponsive">
@@ -63,7 +68,4 @@
       </svg>
     </a>
   </div>
-
-
-
 </section>

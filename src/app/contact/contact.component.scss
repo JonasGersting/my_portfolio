@@ -167,12 +167,12 @@ textarea.ng-invalid.ng-touched {
         resize: none;
         line-height: 1.5;
         padding: 32px;
-        overflow: auto; // Scrollen erlauben
-        scrollbar-width: none; // Versteckt Scrollbar in Firefox
-        -ms-overflow-style: none; // Versteckt Scrollbar in IE/Edge
+        overflow: auto;
+        scrollbar-width: none; 
+        -ms-overflow-style: none;
 
         &::-webkit-scrollbar {
-            display: none; // Versteckt Scrollbar in WebKit-basierten Browsern
+            display: none;
         }
 
         &:focus {
@@ -242,6 +242,15 @@ textarea.ng-invalid.ng-touched {
 
 .checkbox:not(:checked)+label:hover {
     background: url('./../../assets/img/checkboxHover.png') no-repeat;
+}
+.privacyError{
+    width: 100%;
+    height: 20px;
+    >label{
+        @include setFont ($family: 'Josefin Sans', $size:14px, $weight: 400);
+        color: $error;
+        cursor: pointer;
+    }
 }
 
 .sendWrapper {

@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SetLanguageService } from './../set-language.service';
 
-
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -14,9 +13,9 @@ import { SetLanguageService } from './../set-language.service';
 export class ContactComponent {
   globalLanguage: string = 'DE';
   staticTexts = {
-    english:{
-      headline:'Contact me',
-      text:'Are you still not sure whether I am the right person for you? Write me a message and see for yourself. I will respond as quickly as possible and look forward to hearing from you.',
+    english: {
+      headline: 'Contact me',
+      text: 'Are you still not sure whether I am the right person for you? Write me a message and see for yourself. I will respond as quickly as possible and look forward to hearing from you.',
       labelName: 'Your Name',
       labelMail: 'Your Email',
       labelMsg: 'Your Message',
@@ -26,11 +25,12 @@ export class ContactComponent {
       privacyPol1: `I've read the`,
       privacyPolLink: 'privacy policy',
       privacyPol2: 'and agree to the processing of my data as outlined.',
-      send: 'Send'
+      send: 'Send',
+      privacyError: 'Please accept the privacy policy.'
     },
-    german:{
-      headline:'Kontaktieren Sie mich',
-      text:'Sie sind sich noch nich sicher, ob ich der richtige für Sie bin? Schreiben Sie mir eine Nachricht und überzeugen sie sich selbst. Ich werde so schnell wie möglich antworten und freue mich von Ihnen zu hören.',
+    german: {
+      headline: 'Kontaktieren Sie mich',
+      text: 'Sie sind sich noch nich sicher, ob ich der richtige für Sie bin? Schreiben Sie mir eine Nachricht und überzeugen sie sich selbst. Ich werde so schnell wie möglich antworten und freue mich von Ihnen zu hören.',
       labelName: 'Ihr Name',
       labelMail: 'Ihre Email',
       labelMsg: 'Ihre Nachricht',
@@ -40,28 +40,38 @@ export class ContactComponent {
       privacyPol1: `Ich habe die`,
       privacyPolLink: 'Datenschutzrichtlinie',
       privacyPol2: ' gelesen und stimme der oben beschriebenen Verarbeitung meiner Daten zu.',
-      send: 'Senden'
+      send: 'Senden',
+      privacyError: 'Bitte akzeptieren Sie die Datenschutzerklärung.'
     },
-
-  }
+  };
   isPrivacyPolicyChecked = false;
   yourName = '';
   yourMail = '';
   yourMessage = '';
+
   constructor(private languageService: SetLanguageService) {
     this.languageService.language$.subscribe(lang => {
       this.globalLanguage = lang;
     });
   }
-  
+
+  isFormValid(): boolean {
+    const isEmailValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(this.yourMail);
+    return (
+      this.isPrivacyPolicyChecked &&
+      this.yourName.trim() !== '' &&
+      isEmailValid &&
+      this.yourMessage.length >= 10
+    );
+  }
+
   submit(form: NgForm) {
-    if (form.invalid) {
+    if (form.invalid || !this.isPrivacyPolicyChecked) {
       Object.values(form.controls).forEach(control => control.markAsTouched());
       console.error('Formular ungültig!');
       return;
     }
-  
+
     console.log('Formular erfolgreich gesendet:', form.value);
   }
-  
 }

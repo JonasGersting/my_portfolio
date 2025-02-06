@@ -217,6 +217,12 @@ section {
 
 
 }
+@media only screen and (max-width: 880px) {
+    .socialMediaWrapper {
+        display: none;
+    }
+}
+
 
 @media only screen and (max-width: 850px) {
     .headlineOrder {
@@ -255,9 +261,7 @@ section {
 
 
 @media only screen and (max-width: 660px) {
-    .socialMediaWrapper {
-        display: none;
-    }
+
 
     .arrow {
         margin: 48px 0 0 0;
