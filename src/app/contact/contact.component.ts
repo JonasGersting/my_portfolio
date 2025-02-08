@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SetLanguageService } from './../set-language.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,7 @@ import { SetLanguageService } from './../set-language.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  http = inject(HttpClient);
   globalLanguage: string = 'DE';
   staticTexts = {
     english: {
@@ -71,7 +73,23 @@ export class ContactComponent {
       console.error('Formular ungültig!');
       return;
     }
-
-    console.log('Formular erfolgreich gesendet:', form.value);
+  
+    const payload = {
+      email: this.yourMail,
+      name: this.yourName,
+      message: this.yourMessage,
+    };
+  
+    this.http.post('https://jonasgersting.de/sendMail.php', payload).subscribe({
+      next: (response) => {
+        console.log('E-Mail erfolgreich gesendet:', response);
+        form.resetForm();
+        this.isPrivacyPolicyChecked = false;
+      },
+      error: (error) => {
+        console.error('Fehler beim Senden der E-Mail:', error);
+      },
+    });
   }
+  
 }
