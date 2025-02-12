@@ -58,7 +58,7 @@ footer {
 
 .socialMedia {
     @include orderElements($direction: row, $gap: 16px);
-
+    width: 185px;
     >a {
         margin-bottom: 8px !important;
         width: 32px;
@@ -110,7 +110,7 @@ footer {
     .socialMedia {
         order: 2; /* Setzt die sozialen Medien nach dem Logo */
         justify-content: space-between !important;
-        width: 150x;
+        width: 150px;
     }
     
     .legalNotice {
