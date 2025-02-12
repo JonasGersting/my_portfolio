@@ -37,7 +37,9 @@ export class MyProjectsComponent {
       headline3: 'Was ich gelernt habe',
       description3: 'In diesem Projekt hatte ich die Möglichkeit, OOP zu erkunden, was eine bereichernde Erfahrung war. Im Verlauf von 5 Wochen lag der Schwerpunkt darauf, HTML Canvas zu nutzen und miteinander verbundene Klassen zu implementieren, um dynamische Gameplay-Mechaniken zu erstellen. Dieses Projekt hat meine Kenntnisse in JavaScript erheblich gestärkt.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
-      img: './../../assets/img/elPolloLocoScreenshot.PNG'
+      img: './../../assets/img/elPolloLocoScreenshot.PNG',
+      github: "https://github.com/JonasGersting/El-Pollo-Loco",
+      liveTest: "https://elpolloloco.jonasgersting.de/El-Pollo-Loco/index.html"
     },
     {
       title: 'Join',
@@ -49,7 +51,9 @@ export class MyProjectsComponent {
       headline3: 'Meine Erfahrung',
       description3: 'Als Teil eines 3-köpfigen Teams in einem 5-wöchigen Projekt war meine Hauptaufgabe die Implementierung des Dashboards sowie des gesamten Kontaktbereichs. Die Arbeit in der Gruppe lehrte mich die Bedeutung klarer Kommunikation, effektiver Aufgabenverteilung und regelmäßiger Zusammenarbeit, um sicherzustellen, dass alle Komponenten nahtlos integriert werden. Zudem habe ich wertvolle Einblicke darin gewonnen, wie man Konflikte bewältigt, konstruktives Feedback gibt und sich an unterschiedliche Arbeitsstile innerhalb eines Teams anpasst.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Firebase.png'],
-      img: './../../assets/img/join.png'
+      img: './../../assets/img/join.png',
+      github: "https://github.com/JonasGersting/join",
+      liveTest: "https://jonasgersting.de/join.jonasgersting.de/Join/html/login.html"
     },
     {
       title: 'Ring of Fire',
@@ -61,7 +65,9 @@ export class MyProjectsComponent {
       headline3: 'Was ich gelernt habe',
       description3: 'Dieses Projekt gab mir wertvolle Einblicke in die Full-Stack-Webentwicklung und führte mich an zentrale Konzepte wie das Angular Framework, die Firebase-Integration, komponentenbasierte Gestaltung und User Experience Design heran.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Angular.png', './../../assets/img/Firebase.png'],
-      img: './../../assets/img/ringOfFire.PNG'
+      img: './../../assets/img/ringOfFire.PNG',
+      github: "https://github.com/JonasGersting/ringoffire",
+      liveTest: "https://ringoffire.jonasgersting.de/ringoffire/"
     },
     {
       title: 'Pokedex',
@@ -73,7 +79,9 @@ export class MyProjectsComponent {
       headline3: 'Was ich gelernt habe',
       description3: 'Dieses Projekt bot eine hervorragende Gelegenheit, mein Verständnis für Webentwicklung und die Arbeit mit externen APIs zu vertiefen. Wichtige Erkenntnisse beinhalten: Arbeiten mit APIs, dynamische DOM-Manipulation, responsives Design.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Api.png'],
-      img: './../../assets/img/pokedexScreenshot.PNG'
+      img: './../../assets/img/pokedexScreenshot.PNG',
+      github: "https://github.com/JonasGersting/Pokedex",
+      liveTest: "https://pokedex.jonasgersting.de/index.html"
     },
 
   ];
@@ -89,7 +97,9 @@ export class MyProjectsComponent {
       headline3: 'What I have learnt',
       description3: 'In this project, I had the opportunity to explore OOP, which was a rewarding experience. Over th span of 5 weeks, the main emphasis was on utilizing HTML Canvas and implementing interconnected classes to cdreate dynamic gameplay mechanis. This project significantly strengthened my proficiency in JacaScript.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png'],
-      img: './../../assets/img/elPolloLocoScreenshot.PNG'
+      img: './../../assets/img/elPolloLocoScreenshot.PNG',
+      github: "https://github.com/JonasGersting/El-Pollo-Loco",
+      liveTest: "https://elpolloloco.jonasgersting.de/El-Pollo-Loco/index.html"
     },
     {
       title: 'Join',
@@ -101,7 +111,9 @@ export class MyProjectsComponent {
       headline3: 'My group work experience',
       description3: 'As part of a 3-person team in a 5-week project, my primary role involved implementing the dashboard as well as the whole contact section. Working in a group taught me the importance of clear communication, task delegation, and regular collaboration to ensure all components integrate seamlessly. I also gained valuable insights into how to manage conflicts, provide constructive feedback, and adapt to different working styles within a team.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Firebase.png'],
-      img: './../../assets/img/join.png'
+      img: './../../assets/img/join.png',
+      github: "https://github.com/JonasGersting/join",
+      liveTest: "https://jonasgersting.de/join.jonasgersting.de/Join/html/login.html"
     },
     {
       title: 'Ring of Fire',
@@ -113,7 +125,9 @@ export class MyProjectsComponent {
       headline3: 'What I have learnt',
       description3: `This project gave me valuable insights into full-stack web development and introduced me to key concepts such as Angular Framework, Firebase Integration, Component-Based Design, User Experience Design.`,
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Angular.png', './../../assets/img/Firebase.png'],
-      img: './../../assets/img/ringOfFire.PNG'
+      img: './../../assets/img/ringOfFire.PNG',
+      github: "https://github.com/JonasGersting/ringoffire",
+      liveTest: "https://ringoffire.jonasgersting.de/ringoffire/"
     },
     {
       title: 'Pokedex',
@@ -125,7 +139,9 @@ export class MyProjectsComponent {
       headline3: 'What I have learnt',
       description3: 'This project offered an excellent opportunity to deepen my understanding of web development and working with external APIs. Key takeaways include: Working with APIs, Dynamic DOM Manipulation, Responsive Design.',
       technologies: ['./../../assets/img/HTML.png', './../../assets/img/CSS.png', './../../assets/img/Javascript.png', './../../assets/img/Api.png'],
-      img: './../../assets/img/pokedexScreenshot.PNG'
+      img: './../../assets/img/pokedexScreenshot.PNG',
+      github: "https://github.com/JonasGersting/Pokedex",
+      liveTest: "https://pokedex.jonasgersting.de/index.html"
     },
 
   ];

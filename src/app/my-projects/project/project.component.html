@@ -23,8 +23,8 @@
             <span [innerHTML]="project.description3"></span>
         </div>
         <div class="projectLinks projectLinksSmartphone">
-            <a href="">Live Test</a>
-            <a href="">GitHub</a>
+            <a [href]="project.liveTest">Live Test</a>
+            <a [href]="project.github">GitHub</a>
         </div>
     </div>
     <div class="projectImgs">
@@ -42,8 +42,8 @@
         </div>   
         <img [src]="project.img" alt="">
         <div class="projectLinks projectLinksPC">
-            <a href="">Live Test</a>
-            <a href="">GitHub</a>
+            <a [href]="project.liveTest">Live Test</a>
+            <a [href]="project.github">GitHub</a>
         </div>
     </div>
 </section>
