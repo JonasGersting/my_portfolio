@@ -28,7 +28,10 @@ export class ContactComponent {
       privacyPolLink: 'privacy policy',
       privacyPol2: 'and agree to the processing of my data as outlined.',
       send: 'Send',
-      privacyError: 'Please accept the privacy policy.'
+      privacyError: 'Please accept the privacy policy.',
+      msgError: 'There was an error sending your message.',
+      msgDone: 'Your message has been sent.'
+
     },
     german: {
       headline: 'Kontaktieren Sie mich',
@@ -43,13 +46,17 @@ export class ContactComponent {
       privacyPolLink: 'Datenschutzrichtlinie',
       privacyPol2: ' gelesen und stimme der oben beschriebenen Verarbeitung meiner Daten zu.',
       send: 'Senden',
-      privacyError: 'Bitte akzeptieren Sie die Datenschutzerklärung.'
+      privacyError: 'Bitte akzeptieren Sie die Datenschutzerklärung.',
+            msgError: 'Es gab einen Fehler beim Senden der Nachricht.',
+      msgDone: 'Ihre Nachricht wurde gesendet.'
     },
   };
   isPrivacyPolicyChecked = false;
   yourName = '';
   yourMail = '';
   yourMessage = '';
+  messageSent = false;
+  messageSentFail = false;
 
   constructor(private languageService: SetLanguageService) {
     this.languageService.language$.subscribe(lang => {
@@ -82,12 +89,20 @@ export class ContactComponent {
   
     this.http.post('https://jonasgersting.de/sendMail.php', payload).subscribe({
       next: (response) => {
+        this.messageSent = true;
         console.log('E-Mail erfolgreich gesendet:', response);
         form.resetForm();
         this.isPrivacyPolicyChecked = false;
+        setTimeout(() => {
+          this.messageSent = false;
+        }, 2000);
       },
       error: (error) => {
+        this.messageSentFail = true;
         console.error('Fehler beim Senden der E-Mail:', error);
+        setTimeout(() => {
+          this.messageSentFail = false;
+        }, 2000);
       },
     });
   }

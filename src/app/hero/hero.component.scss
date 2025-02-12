@@ -53,10 +53,27 @@ section {
         opacity: 1;
     }
 
+    &:hover {
+
+        >img {
+            border-bottom-left-radius: 184px;
+            border-bottom-right-radius: 156px;
+        }
+
+    }
+
     >img {
-        width: 500px;
+
+        width: 440px;
         max-width: 100%;
         z-index: 3;
+        position: absolute;
+        bottom: 0px;
+        right: 100px;
+        border-bottom-left-radius: 172px;
+        border-bottom-right-radius: 161px;
+        transition: border-radius 0.6s ease-in-out;
+
     }
 }
 
@@ -217,6 +234,7 @@ section {
 
 
 }
+
 @media only screen and (max-width: 880px) {
     .socialMediaWrapper {
         display: none;
@@ -244,8 +262,10 @@ section {
         background-repeat: no-repeat;
 
         >img {
-            width: 266px;
-            height: 370px;
+            width: 250px;
+            right: 50px;
+            border-bottom-left-radius: 108px;
+            border-bottom-right-radius: 91px;
         }
 
 

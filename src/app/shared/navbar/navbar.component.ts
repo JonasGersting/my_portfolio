@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
       "contact": "Contact"
     },
     "german": {
-      "whyMe": "Warum ich",
+      "whyMe": "Warum mich",
       "skills": "Fähigkeiten",
       "projects": "Projekte",
       "contact": "Kontakt"

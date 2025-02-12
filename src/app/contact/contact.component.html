@@ -68,4 +68,10 @@
       </svg>
     </a>
   </div>
+  @if (messageSent) {
+    <span [ngClass]="'msgInfoBadge'" class="msgDone">{{ globalLanguage === 'DE' ? staticTexts.german.msgDone : staticTexts.english.msgDone }}</span>
+  }
+  @if (messageSentFail) {
+    <span [ngClass]="'msgInfoBadge'" class="msgError">{{ globalLanguage === 'DE' ? staticTexts.german.msgError : staticTexts.english.msgError }}</span>
+  }
 </section>

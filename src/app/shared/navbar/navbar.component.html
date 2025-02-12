@@ -29,7 +29,7 @@
     </div>
 </div>
 
-<button (click)="toggleRespMenu()" class="responsiveMenuIcon">
+<button (click)="toggleRespMenu()" [class.open]="menuOpen" class="responsiveMenuIcon">
     <div class="responsiveMenuStripe"></div>
     <div class="responsiveMenuStripe"></div>
     <div class="responsiveMenuStripe"></div>

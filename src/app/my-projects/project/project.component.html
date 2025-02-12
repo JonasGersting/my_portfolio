@@ -31,14 +31,14 @@
         <h3 class="titleResponsive">{{ project.title }}</h3>
         <div class="techResponsive">
             <div class="technologies">
-                <span>Technologies</span>
+                <span>{{ globalLanguage === 'DE' ? 'Technologien' : 'Technologies' }}</span>
                 <div class="techImgOrder">
                     @for (img of project.technologies; track $index) {
                         <img [src]= "img" alt="">
                     }
                 </div>
             </div>
-            <span class="duration durationSmartphone">Duration: {{ project.duration }}</span>
+            <span class="duration durationSmartphone">{{ globalLanguage === 'DE' ? 'Dauer' : 'Duration' }}: {{ project.duration }}</span>
         </div>   
         <img [src]="project.img" alt="">
         <div class="projectLinks projectLinksPC">
