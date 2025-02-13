@@ -2,7 +2,7 @@
     <div class="projectBulletPoints">
         <div>
             <div>
-                <img src="./../../../assets/img/bulletPoint.png" alt="">
+                <img src="assets/img/bulletPoint.png" alt="">
                 <h3>{{ project.headline1 }}</h3>
                 <span class="duration durationPc">{{ globalLanguage === 'DE' ? duration.german : duration.english }} {{ project.duration }}</span>
             </div>
@@ -10,21 +10,21 @@
         </div>
         <div>
             <div>
-                <img src="./../../../assets/img/bulletPoint.png" alt="">
+                <img src="assets/img/bulletPoint.png" alt="">
                 <h3>{{ project.headline2 }}</h3>
             </div>
             <span [innerHTML]="project.description2"></span>
         </div>
         <div>
             <div>
-                <img src="./../../../assets/img/bulletPoint.png" alt="">
+                <img src="assets/img/bulletPoint.png" alt="">
                 <h3>{{ project.headline3 }}</h3>
             </div>
             <span [innerHTML]="project.description3"></span>
         </div>
         <div class="projectLinks projectLinksSmartphone">
-            <a [href]="project.liveTest">Live Test</a>
-            <a [href]="project.github">GitHub</a>
+            <a target="_blank" [href]="project.liveTest">Live Test</a>
+            <a target="_blank" [href]="project.github">GitHub</a>
         </div>
     </div>
     <div class="projectImgs">
@@ -42,8 +42,8 @@
         </div>   
         <img [src]="project.img" alt="">
         <div class="projectLinks projectLinksPC">
-            <a [href]="project.liveTest">Live Test</a>
-            <a [href]="project.github">GitHub</a>
+            <a target="_blank" [href]="project.liveTest">Live Test</a>
+            <a target="_blank" [href]="project.github">GitHub</a>
         </div>
     </div>
 </section>

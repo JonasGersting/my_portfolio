@@ -19,8 +19,8 @@ section {
         max-width: 1200px;
         width: 100%;
         overflow: auto;
-        scrollbar-width: none; // Versteckt Scrollbar in Firefox
-        -ms-overflow-style: none; // Versteckt Scrollbar in IE/Edge
+        scrollbar-width: none; 
+        -ms-overflow-style: none; 
     }
 
     .presentationWrapper {
@@ -29,7 +29,6 @@ section {
 
     }
 }
-
 
 .background {
     @include orderElements();
@@ -96,8 +95,6 @@ section {
     }
 
 }
-
-
 
 @media only screen and (max-width: 500px) {
   .presentationWrapper{

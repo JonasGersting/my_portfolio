@@ -65,10 +65,10 @@ section {
 app-project {
   @include orderElements ();
   width: 100%;
-  display: none; // Standardmäßig ausblenden
+  display: none; 
 
   &.active {
-    display: flex; // Sichtbar, wenn aktiv
+    display: flex; 
   }
 
   &.animate {
@@ -76,7 +76,6 @@ app-project {
     overflow: hidden !important;
   }
 }
-
 
 @media only screen and (max-width: 700px) {
   section {
@@ -87,9 +86,7 @@ app-project {
         height: 50px !important;
       }
     }
-
   }
-
 }
 
 @media only screen and (max-width: 400px) {
@@ -99,7 +96,5 @@ app-project {
         font-size: 16px !important;
       }
     }
-
   }
-
 }

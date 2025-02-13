@@ -9,14 +9,11 @@
                     <span>{{ globalLanguage === 'DE' ? staticTexts.german.project : staticTexts.english.project }}</span>
                 }
             </button>
-        }
-        
-        
+        }  
     </div>
     <div class="appProjectWrapper" >
         @if (activeButton !== null) {
             <app-project [project]="globalLanguage === 'DE' ? projectsGerman[activeButton] : projectsEnglish[activeButton]"  [ngClass]="{'active': activeButton !== null, 'animate': triggerAnimation}" ></app-project>
             }
     </div>
-
 </section>

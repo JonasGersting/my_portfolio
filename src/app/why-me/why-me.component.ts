@@ -10,7 +10,6 @@ import { SetLanguageService } from './../set-language.service';
   styleUrls: ['./why-me.component.scss']
 })
 export class WhyMeComponent {
-
   globalLanguage: string = 'DE';
   staticTexts = {
     "english":{
@@ -37,8 +36,6 @@ export class WhyMeComponent {
         { "icon": "assets/img/relocate.png", "prefix": "Ich bin ", "text": "bereit, umzuziehen", "end": "...", "cursor": "|" }
       ]
     }
-
-
 
   transparent: string = 'transparent';
   isTransparent = true;
@@ -151,8 +148,6 @@ export class WhyMeComponent {
     let selectetLangTexts = this.returnCorrectLang();
     this.currentIndex = (this.currentIndex + 1) % selectetLangTexts.length;
     this.currentIcon = '';
-
     this.startTypingAnimation();
-
   }
 }

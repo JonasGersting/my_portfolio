@@ -10,49 +10,46 @@ import { Component } from '@angular/core';
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent {
-
-
   mySkills: any = [
     {
-      "img": "./../../../assets/img/Angular.png",
+      "img": "assets/img/Angular.png",
       "title": "Angular"
     },
     {
-      "img": "./../../../assets/img/TypeScript.png",
+      "img": "assets/img/TypeScript.png",
       "title": "TypeScript"
     },
     {
-      "img": "./../../../assets/img/Javascript.png",
+      "img": "assets/img/Javascript.png",
       "title": "JavaScript"
     },
     {
-      "img": "./../../../assets/img/HTML.png",
+      "img": "assets/img/HTML.png",
       "title": "HTML"
     },
     {
-      "img": "./../../../assets/img/CSS.png",
+      "img": "assets/img/CSS.png",
       "title": "CSS"
     },
     {
-      "img": "./../../../assets/img/Api.png",
+      "img": "assets/img/Api.png",
       "title": "Rest-Api"
     },
     {
-      "img": "./../../../assets/img/Firebase.png",
+      "img": "assets/img/Firebase.png",
       "title": "Firebase"
     },
     {
-      "img": "./../../../assets/img/Git.png",
+      "img": "assets/img/Git.png",
       "title": "GIT"
     },
     {
-      "img": "./../../../assets/img/MaterialDesign.png",
+      "img": "assets/img/MaterialDesign.png",
       "title": "Material Design"
     },
     {
-      "img": "./../../../assets/img/Scrum.png",
+      "img": "assets/img/Scrum.png",
       "title": "Scrum"
     }
   ]
-
 }

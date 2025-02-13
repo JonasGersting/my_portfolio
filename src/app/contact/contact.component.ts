@@ -87,7 +87,7 @@ export class ContactComponent {
       message: this.yourMessage,
     };
   
-    this.http.post('https://jonasgersting.de/sendMail.php', payload).subscribe({
+    this.http.post('https://jonasgersting.de/portfolio/sendMail.php', payload).subscribe({
       next: (response) => {
         this.messageSent = true;
         console.log('E-Mail erfolgreich gesendet:', response);
@@ -106,5 +106,4 @@ export class ContactComponent {
       },
     });
   }
-  
 }

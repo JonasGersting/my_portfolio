@@ -8,8 +8,6 @@ import { MyProjectsComponent } from '../my-projects/my-projects.component';
 import { TeamplayerComponent } from '../teamplayer/teamplayer.component';
 import { ContactComponent } from '../contact/contact.component';
 
-
-
 @Component({
   selector: 'app-main-content',
   standalone: true,
@@ -29,7 +27,6 @@ export class MainContentComponent implements AfterViewInit {
       root: null,
       threshold: 0.2
     };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -37,8 +34,6 @@ export class MainContentComponent implements AfterViewInit {
         }
       });
     }, observerOptions);
-
-
     const targets = document.querySelectorAll('.scroll-animate');
     targets.forEach(target => observer.observe(target));
   }

@@ -11,8 +11,6 @@ import { NavbarComponent } from "../shared/navbar/navbar.component";
 })
 export class PrivacyPolicyComponent {
   globalLanguage: string = 'DE';
-
-
   staticTexts = {
     english:{
       privacyHeadline: 'Privacy Policy',
@@ -124,7 +122,6 @@ export class PrivacyPolicyComponent {
         'Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Die aktuelle Version ist auf unserer Website verfügbar.'
       ]
     }
-
   }
 
   constructor(private languageService: SetLanguageService) {

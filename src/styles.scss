@@ -21,7 +21,6 @@ $secondary_light_blue: #1F262B;
     font-weight: $weight;
 }
 
-
 * {
     margin: 0;
     scroll-behavior: smooth;
@@ -35,22 +34,17 @@ body {
 .no-scroll {
     overflow: hidden;
     height: 100%;
-    /* Optional, um sicherzustellen, dass die Seite komplett fixiert ist */
 }
 
-
-/* width */
 ::-webkit-scrollbar {
     width: 10px;
     height: 20px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: $primary_blue;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: white;
 }
@@ -59,17 +53,12 @@ body {
 
 @media only screen and (max-width: 880px) {
 
-    /* Für moderne Browser */
     body {
         scrollbar-width: 0 !important;
-        /* Firefox */
         -ms-overflow-style: 0 !important;
-        /* Internet Explorer 10+ */
     }
 
-    /* Für WebKit-basierte Browser (Chrome, Edge, Safari) */
     body::-webkit-scrollbar {
         width: 0px !important;
-        /* Scrollbar ausblenden */
     }
 }

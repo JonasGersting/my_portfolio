@@ -14,7 +14,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
   globalLanguage: string = 'DE';
   selectedLink: string = '';
   menuOpen: boolean = false;
-
   language: any = {
     "english": {
       "whyMe": "Why me",
@@ -29,7 +28,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
       "contact": "Kontakt"
     }
   };
-
   private scrollTimeout: any;
 
   constructor(
@@ -43,20 +41,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    // Initialisiere selectedLink basierend auf dem aktuellen Hash-Fragment
     this.setSelectedLinkFromFragment(window.location.hash);
-
-    // Überwache Änderungen im Hash-Fragment der URL
     this.activatedRoute.fragment.subscribe((fragment: string | null) => {
       this.setSelectedLinkFromFragment(fragment ? `#${fragment}` : '');
     });
-
-    // Füge einen Event-Listener für das Scrollen hinzu
     window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
   ngOnDestroy(): void {
-    // Entferne den Event-Listener, um Speicherlecks zu vermeiden
     window.removeEventListener('scroll', this.handleScroll.bind(this));
   }
 
@@ -108,11 +100,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   private handleScroll(): void {
-    // Debouncing: Verzögere die Ausführung, um die Leistung zu verbessern
     clearTimeout(this.scrollTimeout);
     this.scrollTimeout = setTimeout(() => {
       this.updateSelectedLinkBasedOnScroll();
-    }, 100); // Anpassbar: Verzögerung in Millisekunden
+    }, 100); 
   }
 
   private updateSelectedLinkBasedOnScroll(): void {
@@ -123,12 +114,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
       { id: 'my-projects', link: 'projects' },
       { id: 'contact', link: 'contact' }
     ];
-
     for (const section of sections) {
       const element = document.getElementById(section.id);
       if (element) {
         const rect = element.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom >= 100) { // 100 ist der Offset für die Navbar
+        if (rect.top <= 100 && rect.bottom >= 100) { 
           this.selectedLink = section.link;
           break;
         }

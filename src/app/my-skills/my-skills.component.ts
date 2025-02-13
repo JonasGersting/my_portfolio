@@ -17,12 +17,9 @@ export class MySkillsComponent {
     "german": "Meine Fähigkeiten"
   }
 
-    constructor(private languageService: SetLanguageService) {
-      this.languageService.language$.subscribe(lang => {
-        this.globalLanguage = lang;
-      });
-    }
- 
-  
-
+  constructor(private languageService: SetLanguageService) {
+    this.languageService.language$.subscribe(lang => {
+      this.globalLanguage = lang;
+    });
+  }
 }

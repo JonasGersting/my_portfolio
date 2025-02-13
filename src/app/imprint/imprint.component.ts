@@ -38,8 +38,6 @@ export class ImprintComponent {
       privacy: ['Datenschutz:','Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Ausführliche Informationen über Art, Umfang und Zweck der Erhebung und Verwendung Ihrer Daten sowie über Ihre Rechte und Einstellungsmöglichkeiten zum Datenschutz entnehmen Sie bitte unserer ausführlichen'],
       privacyPol: 'Datenschutzerklärung'
     }
-
-
   }
   constructor(private languageService: SetLanguageService) {
     this.languageService.language$.subscribe(lang => {

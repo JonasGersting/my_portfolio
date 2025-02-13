@@ -67,16 +67,16 @@ h2 {
     overflow-wrap: break-word;
     white-space: normal;
 
-    > span {
+    >span {
         line-height: 21.6px;
     }
 
-    > div {
+    >div {
         @include orderElements($align_items: end);
 
         >a {
             @include orderElements();
-          
+
             margin-top: 16px;
             color: $primary_blue;
             text-decoration: none;
@@ -85,7 +85,7 @@ h2 {
             border: 2px solid $primary_blue;
             border-radius: 32px;
             transition: background-color 0.3s ease;
-    
+
             &:hover {
                 background-color: #3F454A;
             }
@@ -93,11 +93,9 @@ h2 {
     }
 }
 
-
-
 @media only screen and (max-width: 1000px) {
     section {
-        > div {
+        >div {
             flex-direction: column;
         }
     }
@@ -113,6 +111,7 @@ h2 {
     .whoAmI {
         height: auto;
         margin-top: 48px;
+
         >div {
             margin-top: 48px;
             align-items: center;
@@ -120,25 +119,26 @@ h2 {
     }
 }
 
-
 @media only screen and (max-width: 600px) {
-   .location{
-    font-size: 14px;
-    width: 320px;
-    >img{
-        width: 32px;
-        height: 32px;
+    .location {
+        font-size: 14px;
+        width: 320px;
+
+        >img {
+            width: 32px;
+            height: 32px;
+        }
     }
-   }
-   .whoAmI {
-    height: auto;
-    margin-top: 24px;
-    font-size: 16px;
-}
+
+    .whoAmI {
+        height: auto;
+        margin-top: 24px;
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 660px) {
     h2 {
         margin-top: 80px;
     }
- }
+}
