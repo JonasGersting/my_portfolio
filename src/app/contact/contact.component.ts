@@ -48,7 +48,7 @@ export class ContactComponent {
       privacyPol2: ' gelesen und stimme der oben beschriebenen Verarbeitung meiner Daten zu.',
       send: 'Senden',
       privacyError: 'Bitte akzeptieren Sie die Datenschutzerklärung.',
-            msgError: 'Es gab einen Fehler beim Senden der Nachricht.',
+      msgError: 'Es gab einen Fehler beim Senden der Nachricht.',
       msgDone: 'Ihre Nachricht wurde gesendet.'
     },
   };
@@ -81,19 +81,19 @@ export class ContactComponent {
       console.error('Formular ungültig!');
       return;
     }
-  
+
     const payload = {
       email: this.yourMail,
       name: this.yourName,
       message: this.yourMessage,
     };
-  
+
     this.http.post('https://jonasgersting.de/portfolio/sendMail.php', payload).subscribe({
       next: (response) => {
         this.messageSent = true;
         console.log('E-Mail erfolgreich gesendet:', response);
         form.resetForm();
-        this.isPrivacyPolicyChecked = false;
+        this.isPrivacyPolicyChecked = true;
         setTimeout(() => {
           this.messageSent = false;
         }, 2000);
@@ -106,9 +106,11 @@ export class ContactComponent {
         }, 2000);
       },
     });
+    console.log(this.isPrivacyPolicyChecked);
+    
   }
 
-  showPrivacyPolicy(){
+  showPrivacyPolicy() {
     this.router.navigateByUrl('privacyPolicy');
   }
 }

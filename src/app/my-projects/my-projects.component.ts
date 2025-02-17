@@ -56,20 +56,6 @@ export class MyProjectsComponent {
       liveTest: "https://jonasgersting.de/join.jonasgersting.de/Join/html/login.html"
     },
     {
-      title: 'Ring of Fire',
-      headline1: 'Über das Projekt',
-      description1: 'Ring of Fire ist eine digitale Adaption des beliebten kartenbasierten Trinkspiels. Entwickelt für Gruppen von Freunden bietet das Spiel ein unterhaltsames und spannendes Erlebnis, bei dem die Spieler Karten ziehen und die einzigartigen Regeln oder Herausforderungen befolgen, die jeder Karte zugeordnet sind.',
-      duration: '3 Wochen',
-      headline2: 'Wie ich den Prozess strukturiert habe',
-      description2: 'For this project, I divided the application into reusable components and services within Angular. Each part of the game, such as the card deck, players, and rule logic, was handled separately to maintain clarity and scalability. The game data, including player information and card statuses, is stored in Firebase, enabling real-time synchronization between players.',
-      headline3: 'Was ich gelernt habe',
-      description3: 'Dieses Projekt gab mir wertvolle Einblicke in die Full-Stack-Webentwicklung und führte mich an zentrale Konzepte wie das Angular Framework, die Firebase-Integration, komponentenbasierte Gestaltung und User Experience Design heran.',
-      technologies: ['assets/img/HTML.png', 'assets/img/CSS.png', 'assets/img/Angular.png', 'assets/img/Firebase.png'],
-      img: 'assets/img/ringOfFire.PNG',
-      github: "https://github.com/JonasGersting/ringoffire",
-      liveTest: "https://ringoffire.jonasgersting.de/ringoffire/"
-    },
-    {
       title: 'Pokedex',
       headline1: 'Über das Projekt',
       description1: 'Pokédex ist eine Webanwendung, die es Benutzern ermöglicht, detaillierte Informationen über Pokémon zu erkunden. Die App ruft Daten von der offiziellen Pokémon-API ab, um Statistiken, Fähigkeiten und Entwicklungsketten für jedes Pokémon anzuzeigen.',
@@ -113,20 +99,6 @@ export class MyProjectsComponent {
       img: 'assets/img/join.png',
       github: "https://github.com/JonasGersting/join",
       liveTest: "https://jonasgersting.de/join.jonasgersting.de/Join/html/login.html"
-    },
-    {
-      title: 'Ring of Fire',
-      headline1: 'About the project',
-      description1: 'Ring of Fire is a digital adaptation of the popular card-based drinking game. Designed for groups of friends, the game offers an engaging and fun experience as players draw cards and follow unique rules or challenges associated with each card.',
-      duration: '3 Weeks',
-      headline2: 'How I have organised my work',
-      description2: 'For this project, I divided the application into reusable components and services within Angular. Each part of the game, such as the card deck, players, and rule logic, was handled separately to maintain clarity and scalability. The game data, including player information and card statuses, is stored in Firebase, enabling real-time synchronization between players.',
-      headline3: 'What I have learnt',
-      description3: `This project gave me valuable insights into full-stack web development and introduced me to key concepts such as Angular Framework, Firebase Integration, Component-Based Design, User Experience Design.`,
-      technologies: ['assets/img/HTML.png', 'assets/img/CSS.png', 'assets/img/Angular.png', 'assets/img/Firebase.png'],
-      img: 'assets/img/ringOfFire.PNG',
-      github: "https://github.com/JonasGersting/ringoffire",
-      liveTest: "https://ringoffire.jonasgersting.de/ringoffire/"
     },
     {
       title: 'Pokedex',
