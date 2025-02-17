@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SetLanguageService } from '../../set-language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -16,9 +17,13 @@ export class FooterComponent {
     german: 'Impressum'
   }
 
-  constructor(private languageService: SetLanguageService) {
+  constructor(private languageService: SetLanguageService, private router: Router) {
     this.languageService.language$.subscribe(lang => {
       this.globalLanguage = lang;
     });
+  }
+
+  showImprint(){
+    this.router.navigateByUrl('imprint');
   }
 }

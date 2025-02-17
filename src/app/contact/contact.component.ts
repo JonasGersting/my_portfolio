@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SetLanguageService } from './../set-language.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -58,7 +59,7 @@ export class ContactComponent {
   messageSent = false;
   messageSentFail = false;
 
-  constructor(private languageService: SetLanguageService) {
+  constructor(private languageService: SetLanguageService, private router: Router) {
     this.languageService.language$.subscribe(lang => {
       this.globalLanguage = lang;
     });
@@ -105,5 +106,9 @@ export class ContactComponent {
         }, 2000);
       },
     });
+  }
+
+  showPrivacyPolicy(){
+    this.router.navigateByUrl('privacyPolicy');
   }
 }
