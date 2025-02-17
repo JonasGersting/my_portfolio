@@ -81,18 +81,21 @@ export class ContactComponent {
       console.error('Formular ungültig!');
       return;
     }
-
+  
     const payload = {
       email: this.yourMail,
       name: this.yourName,
       message: this.yourMessage,
     };
-
+  
     this.http.post('https://jonasgersting.de/portfolio/sendMail.php', payload).subscribe({
       next: (response) => {
-        this.messageSent = true;
-        console.log('E-Mail erfolgreich gesendet:', response);
-        form.resetForm();
+        this.messageSent = true; 
+        form.resetForm({
+          yourName: '',  
+          yourMail: '', 
+          yourMessage: '',
+        });
         this.isPrivacyPolicyChecked = true;
         setTimeout(() => {
           this.messageSent = false;
@@ -100,16 +103,13 @@ export class ContactComponent {
       },
       error: (error) => {
         this.messageSentFail = true;
-        console.error('Fehler beim Senden der E-Mail:', error);
         setTimeout(() => {
           this.messageSentFail = false;
         }, 2000);
       },
     });
-    console.log(this.isPrivacyPolicyChecked);
-    
   }
-
+  
   showPrivacyPolicy() {
     this.router.navigateByUrl('privacyPolicy');
   }
