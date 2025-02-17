@@ -33,6 +33,7 @@ section {
         >span {
             line-height: 30px;
             word-break: break-word;
+
             >a {
                 text-decoration: none;
                 color: $primary_blue;
@@ -51,6 +52,20 @@ section {
                 color: $creme_white;
             }
         }
+    }
+}
+
+.hyperLink {
+    @include setFont($family: 'Josefin Sans', $size: 24px, $weight: 400);
+    text-decoration: none;
+    color: $primary_blue;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover{
+        color: $creme_white;
     }
 }
 

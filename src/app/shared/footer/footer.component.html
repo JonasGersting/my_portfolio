@@ -1,7 +1,7 @@
 <footer>
     <div class="maxWidthFooter">
         <div class="legalNotice">
-            <button (click)="showImprint()">{{ globalLanguage === 'DE' ? imprint.german : imprint.english }}</button>
+            <button class="hyperLink" (click)="showImprint()">{{ globalLanguage === 'DE' ? imprint.german : imprint.english }}</button>
             <span>© Jonas Gersting 2025</span>
         </div>
         <div href="#hero" class="orderLogo">

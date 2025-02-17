@@ -47,7 +47,7 @@
       </div>
      
 
-      <span> {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol1 : staticTexts.english.privacyPol1 }} <button (click)="showPrivacyPolicy()">{{ globalLanguage === 'DE' ? staticTexts.german.privacyPolLink : staticTexts.english.privacyPolLink }} </button>
+      <span> {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol1 : staticTexts.english.privacyPol1 }} <button class="hyperLink" (click)="showPrivacyPolicy()">{{ globalLanguage === 'DE' ? staticTexts.german.privacyPolLink : staticTexts.english.privacyPolLink }} </button>
         {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol2 : staticTexts.english.privacyPol2 }}</span>
     </div>
     <div class="privacyError">

@@ -91,6 +91,20 @@ footer{
     }
 }
 
+.hyperLink {
+    @include setFont($family: 'Josefin Sans', $size: 18px, $weight: 400);
+    text-decoration: none;
+    color: $primary_dark_grey;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover{
+        color: $creme_white;
+    }
+}
+
 
 @media only screen and (max-width: 800px) {
     .maxWidthFooter {

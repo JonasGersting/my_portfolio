@@ -349,6 +349,20 @@ textarea.ng-invalid.ng-touched {
     color: $creme_white;
 }
 
+.hyperLink {
+    @include setFont($family: 'Josefin Sans', $size: 14px, $weight: 400);
+    text-decoration: none;
+    color: $primary_blue;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover{
+        color: $creme_white;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .headlineContact {
         > a {
