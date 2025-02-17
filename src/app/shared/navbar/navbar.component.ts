@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   globalLanguage: string = 'DE';
   selectedLink: string = '';
   menuOpen: boolean = false;
-  isMenuIconVisible: boolean = true; // Menü-Sichtbarkeit
+  isMenuIconVisible: boolean = true; 
   private lastScrollPosition: number = 0;
   private scrollTimeout: any;
 
@@ -104,18 +104,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   private handleScroll(): void {
     const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
     if (currentScrollPosition > this.lastScrollPosition) {
-      // Nach unten scrollen -> Menü-Icon ausblenden
       this.isMenuIconVisible = false;
     } else {
-      // Nach oben scrollen -> Menü-Icon einblenden
       this.isMenuIconVisible = true;
     }
-
     this.lastScrollPosition = currentScrollPosition;
-
-    // Zeitversetztes Link-Update
     clearTimeout(this.scrollTimeout);
     this.scrollTimeout = setTimeout(() => {
       this.updateSelectedLinkBasedOnScroll();

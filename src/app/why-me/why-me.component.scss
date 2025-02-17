@@ -1,6 +1,9 @@
 @import './../../styles.scss';
 @import './../../allFont.scss';
 
+html{
+    scroll-padding-top: -128px;
+}
 section {
     @include orderElements();
     width: 100%;
@@ -11,6 +14,7 @@ section {
 
 h2 {
     @include setFont($size: 60px, $family: 'Anta', $weight: 400);
+    
     color: $primary_blue;
     margin-top: 128px;
     margin-bottom: 48px;
@@ -122,6 +126,12 @@ h2 {
     }
 }
 
+@media only screen and (max-width: 880px){
+    h2 {
+        margin-top: 64px !important;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .location {
         font-size: 14px;
@@ -137,11 +147,5 @@ h2 {
         height: auto;
         margin-top: 24px;
         font-size: 16px;
-    }
-}
-
-@media only screen and (max-width: 660px) {
-    h2 {
-        margin-top: 80px;
     }
 }

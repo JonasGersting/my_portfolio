@@ -14,14 +14,14 @@ export class CurrentlyLearningComponent {
     "english":{
       "head": "What I am currently learning",
       "subHead": "I am currently learning",
-      "motivation":"Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.",
-      "motivation2": ["Staying motivated to expand my IT", " skills requires a strategic approach, a", " curious mindset, and a commitment ", " to lifelong learning."]
+      "motivation":"Svelte is a modern, powerful framework that offers simplicity while ensuring high performance. It allows me to write efficient code and helps me take my frontend skills to the next level.",
+      "motivation2": ["Svelte is a modern, powerful ", " framework that offers simplicity while ensuring high performance.", " It allows me to write efficient code ", " and helps me take my frontend ", " skills to the next level.", ""]
     },
     "german":{
       "head": "Was ich gerade lerne",
       "subHead": "Ich lerne gerade",
-      "motivation":"Motiviert zu bleiben und meine IT-Skills zu erweitern, erfordert Strategie, Neugier und die Verpflichtung zum lebenslangen Lernen.",
-      "motivation2": ["Motiviert zu bleiben und meine IT-Skills", "zu erweitern, erfordert Strategie,", "Neugier und die Verpflichtung", "zum lebenslangen Lernen."]
+      "motivation":"Svelte ist ein modernes, leistungsstarkes Framework, das Einfachheit bietet und gleichzeitig hohe Leistung gewährleistet. Es ermöglicht mir, effizienten Code zu schreiben und hilft mir, meine Frontend-Fähigkeiten auf das nächste Level zu heben.",
+      "motivation2": ["Svelte ist ein modernes Framework,", " das Einfachheit bietet und ", "hohe Leistung gewährleistet.", "Es ermöglicht mir, effizienten Code ", "zu schreiben und hilft mir, meine Fähigkeiten auf das nächste ", "Level zu heben."]
 
     }
   }

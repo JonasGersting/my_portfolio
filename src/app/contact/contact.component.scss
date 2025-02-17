@@ -335,7 +335,7 @@ textarea.ng-invalid.ng-touched {
     animation: slideIn 0.5s ease-out;
   
     &.animated {
-      animation: slideIn 0.5s ease-out, slideOut 0.5s ease-in 3s forwards; // verschwindet nach 3 Sekunden
+      animation: slideIn 0.5s ease-out, slideOut 0.5s ease-in 3s forwards; 
     }
   }
 
@@ -411,6 +411,12 @@ textarea.ng-invalid.ng-touched {
 @media only screen and (max-width: 380px) {
     label {
         font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 880px){
+    h2 {
+        margin-top: 64px !important;
     }
 }
 

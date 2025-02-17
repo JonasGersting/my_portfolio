@@ -98,3 +98,9 @@ app-project {
     }
   }
 }
+
+@media only screen and (max-width: 880px){
+  h2 {
+      margin-top: 64px !important;
+  }
+}
