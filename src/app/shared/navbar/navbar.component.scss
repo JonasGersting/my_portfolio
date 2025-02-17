@@ -2,6 +2,11 @@
 @import './../../../allFont.scss';
 
 
+section{
+    @include orderElements();
+    background-color: $primary_blue;
+    width: 100%;
+}
 
 .links {
     @include orderElements($justify_content: space-between, $direction: row);
@@ -37,6 +42,8 @@
     @include orderElements($gap: 32px, $direction: row, $justify_content: space-evenly);
     background-color: $primary_blue;
     z-index: 5;
+    max-width: 1400px;
+    width: 100%;
 }
 
 .orderLogo {

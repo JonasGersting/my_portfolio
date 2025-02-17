@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { SetLanguageService } from './../set-language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-imprint',
@@ -39,9 +40,13 @@ export class ImprintComponent {
       privacyPol: 'Datenschutzerklärung'
     }
   }
-  constructor(private languageService: SetLanguageService) {
+  constructor(private languageService: SetLanguageService, private router: Router) {
     this.languageService.language$.subscribe(lang => {
       this.globalLanguage = lang;
     });
+  }
+
+  showPrivacyPolicy(){
+    this.router.navigateByUrl('privacyPolicy');
   }
 }

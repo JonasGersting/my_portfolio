@@ -1,66 +1,69 @@
-<div class="orderNavbar">
-    <a href="#hero" class="orderLogo"
-    (click)="setLink('')">
-        <img src="logo.png" alt="">
-        <span class="anta" >J.Gersting</span>
-        <span class="josefin-sans">developer</span>
-    </a>
-    <div class="links">
-        <a href="#why-me"
-        [ngClass]="{'activeLink': selectedLink === 'whyMe'}"
-        (click)="setLink('whyMe')">{{ globalLanguage === 'DE' ? language.german.whyMe : language.english.whyMe }}</a>
-        <a href="#skills"
-        [ngClass]="{'activeLink': selectedLink === 'skills'}"
-        (click)="setLink('skills')">{{ globalLanguage === 'DE' ? language.german.skills : language.english.skills }}</a>
-        <a href="#my-projects"
-        [ngClass]="{'activeLink': selectedLink === 'projects'}"
-        (click)="setLink('projects')">{{ globalLanguage === 'DE' ? language.german.projects : language.english.projects }}</a>
-        <a href="#contact"
-        [ngClass]="{'activeLink': selectedLink === 'contact'}"
-        (click)="setLink('contact')">{{ globalLanguage === 'DE' ? language.german.contact : language.english.contact }}</a>
-    </div>
-    <div class="switchLangBtns">
-        <button 
-        [ngClass]="{'active': globalLanguage === 'DE'}" 
-        (click)="setLanguage('DE')">DE</button>
-        <button
-        [ngClass]="{'active': globalLanguage === 'EN'}" 
-        (click)="setLanguage('EN')">EN</button>
-    </div>
-</div>
 
-<button (click)="toggleRespMenu()" [class.open]="menuOpen" class="responsiveMenuIcon">
-    <div class="responsiveMenuStripe"></div>
-    <div class="responsiveMenuStripe"></div>
-    <div class="responsiveMenuStripe"></div>
-</button>
-
-@if (menuOpen) {
-    <div class="menuOverlay" (click)="closeMenu()"></div>
-    <div class="responsiveMenu">
-    <div class="links">
-        <a href="#why-me"
-        [ngClass]="{'activeLink': selectedLink === 'whyMe'}"
-        (click)="setLink('whyMe')">{{ globalLanguage === 'DE' ? language.german.whyMe : language.english.whyMe }}</a>
-        <a href="#skills"
-        [ngClass]="{'activeLink': selectedLink === 'skills'}"
-        (click)="setLink('skills')">{{ globalLanguage === 'DE' ? language.german.skills : language.english.skills }}</a>
-        <a href="#my-projects"
-        [ngClass]="{'activeLink': selectedLink === 'projects'}"
-        (click)="setLink('projects')">{{ globalLanguage === 'DE' ? language.german.projects : language.english.projects }}</a>
-        <a href="#contact"
-        [ngClass]="{'activeLink': selectedLink === 'contact'}"
-        (click)="setLink('contact')">{{ globalLanguage === 'DE' ? language.german.contact : language.english.contact }}</a>
+<section>
+    <div class="orderNavbar">
+        <a href="#hero" class="orderLogo"
+        (click)="setLink('')">
+            <img src="logo.png" alt="">
+            <span class="anta" >J.Gersting</span>
+            <span class="josefin-sans">developer</span>
+        </a>
+        <div class="links">
+            <a href="#why-me"
+            [ngClass]="{'activeLink': selectedLink === 'whyMe'}"
+            (click)="setLink('whyMe')">{{ globalLanguage === 'DE' ? language.german.whyMe : language.english.whyMe }}</a>
+            <a href="#skills"
+            [ngClass]="{'activeLink': selectedLink === 'skills'}"
+            (click)="setLink('skills')">{{ globalLanguage === 'DE' ? language.german.skills : language.english.skills }}</a>
+            <a href="#my-projects"
+            [ngClass]="{'activeLink': selectedLink === 'projects'}"
+            (click)="setLink('projects')">{{ globalLanguage === 'DE' ? language.german.projects : language.english.projects }}</a>
+            <a href="#contact"
+            [ngClass]="{'activeLink': selectedLink === 'contact'}"
+            (click)="setLink('contact')">{{ globalLanguage === 'DE' ? language.german.contact : language.english.contact }}</a>
+        </div>
+        <div class="switchLangBtns">
+            <button 
+            [ngClass]="{'active': globalLanguage === 'DE'}" 
+            (click)="setLanguage('DE')">DE</button>
+            <button
+            [ngClass]="{'active': globalLanguage === 'EN'}" 
+            (click)="setLanguage('EN')">EN</button>
+        </div>
     </div>
-    <div class="switchLangBtns">
-        <button 
-        [ngClass]="{'active': globalLanguage === 'DE'}" 
-        (click)="setLanguage('DE')">DE</button>
-        <button
-        [ngClass]="{'active': globalLanguage === 'EN'}" 
-        (click)="setLanguage('EN')">EN</button>
+    
+    <button (click)="toggleRespMenu()" [class.open]="menuOpen" class="responsiveMenuIcon">
+        <div class="responsiveMenuStripe"></div>
+        <div class="responsiveMenuStripe"></div>
+        <div class="responsiveMenuStripe"></div>
+    </button>
+    
+    @if (menuOpen) {
+        <div class="menuOverlay" (click)="closeMenu()"></div>
+        <div class="responsiveMenu">
+        <div class="links">
+            <a href="#why-me"
+            [ngClass]="{'activeLink': selectedLink === 'whyMe'}"
+            (click)="setLink('whyMe')">{{ globalLanguage === 'DE' ? language.german.whyMe : language.english.whyMe }}</a>
+            <a href="#skills"
+            [ngClass]="{'activeLink': selectedLink === 'skills'}"
+            (click)="setLink('skills')">{{ globalLanguage === 'DE' ? language.german.skills : language.english.skills }}</a>
+            <a href="#my-projects"
+            [ngClass]="{'activeLink': selectedLink === 'projects'}"
+            (click)="setLink('projects')">{{ globalLanguage === 'DE' ? language.german.projects : language.english.projects }}</a>
+            <a href="#contact"
+            [ngClass]="{'activeLink': selectedLink === 'contact'}"
+            (click)="setLink('contact')">{{ globalLanguage === 'DE' ? language.german.contact : language.english.contact }}</a>
+        </div>
+        <div class="switchLangBtns">
+            <button 
+            [ngClass]="{'active': globalLanguage === 'DE'}" 
+            (click)="setLanguage('DE')">DE</button>
+            <button
+            [ngClass]="{'active': globalLanguage === 'EN'}" 
+            (click)="setLanguage('EN')">EN</button>
+        </div>
     </div>
-</div>
-}
+    }
+</section>
 
 

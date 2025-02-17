@@ -29,8 +29,8 @@
         <span>{{ globalLanguage === 'DE' ? staticTexts.german.ChangesLegalNotice[1] :
             staticTexts.english.ChangesLegalNotice[1] }}</span>
         <h3>{{ globalLanguage === 'DE' ? staticTexts.german.privacy[0] : staticTexts.english.privacy[0] }}</h3>
-        <span>{{ globalLanguage === 'DE' ? staticTexts.german.privacy[1] : staticTexts.english.privacy[1] }}</span> <a
-            href="privacyPolicy"> {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol : staticTexts.english.privacyPol }}.</a>
+        <span>{{ globalLanguage === 'DE' ? staticTexts.german.privacy[1] : staticTexts.english.privacy[1] }}</span> <button
+            (click)="showPrivacyPolicy()"> {{ globalLanguage === 'DE' ? staticTexts.german.privacyPol : staticTexts.english.privacyPol }}.</button>
     </div>
    
 </section>

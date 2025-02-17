@@ -1,16 +1,18 @@
 <footer>
-    <div class="legalNotice">
-        <button (click)="showImprint()">{{ globalLanguage === 'DE' ? imprint.german : imprint.english }}</button>
-        <span>© Jonas Gersting 2025</span>
-    </div>
-    <div href="#hero" class="orderLogo">
-        <img src="logo.png" alt="">
-        <span class="anta">J.Gersting</span>
-        <span class="josefin-sans">developer</span>
-    </div>
-    <div class="socialMedia">
-        <a target="_blank" href="https://github.com/JonasGersting"></a>
-        <a target="_blank" href="mailto:jonasgersting@web.de"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/jonas-gersting-61092734a/"></a>
-    </div>
+    <div class="maxWidthFooter">
+        <div class="legalNotice">
+            <button (click)="showImprint()">{{ globalLanguage === 'DE' ? imprint.german : imprint.english }}</button>
+            <span>© Jonas Gersting 2025</span>
+        </div>
+        <div href="#hero" class="orderLogo">
+            <img src="logo.png" alt="">
+            <span class="anta">J.Gersting</span>
+            <span class="josefin-sans">developer</span>
+        </div>
+        <div class="socialMedia">
+            <a target="_blank" href="https://github.com/JonasGersting"></a>
+            <a target="_blank" href="mailto:jonasgersting@web.de"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/jonas-gersting-61092734a/"></a>
+        </div>
+    </div> 
 </footer>
