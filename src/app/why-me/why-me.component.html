@@ -4,7 +4,9 @@
     <div class="orderLocAndText">
         <div class="location">
             <img [src]="currentIcon" alt="">
-            <span>{{ prefixText }}</span><span>{{ displayedText }}</span><span>{{ endFix }}</span><span [ngClass]="{ 'transparent': isTransparent }">{{ cursor }}</span>
+            <div>
+                <span>{{ prefixText }}</span><span>{{ displayedText }}</span><span>{{ endFix }}</span><span [ngClass]="{ 'transparent': isTransparent }">{{ cursor }}</span>
+            </div>
         </div>
         <div class="whoAmI">
             <span>{{ globalLanguage === 'DE' ? staticTexts.german.motivation : staticTexts.english.motivation }}</span>

@@ -45,7 +45,7 @@ export class WhyMeComponent {
   endFix = '';
   cursor = '';
   currentIndex = 0;
-  private typingSpeed = 100;
+  private typingSpeed = 50;
   private pauseTime = 2000;
 
   constructor(private languageService: SetLanguageService) {
