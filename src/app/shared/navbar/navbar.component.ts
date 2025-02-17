@@ -14,21 +14,24 @@ export class NavbarComponent implements OnInit, OnDestroy {
   globalLanguage: string = 'DE';
   selectedLink: string = '';
   menuOpen: boolean = false;
+  isMenuIconVisible: boolean = true; // Menü-Sichtbarkeit
+  private lastScrollPosition: number = 0;
+  private scrollTimeout: any;
+
   language: any = {
-    "english": {
-      "whyMe": "Why me",
-      "skills": "Skills",
-      "projects": "Projects",
-      "contact": "Contact"
+    english: {
+      whyMe: 'Why me',
+      skills: 'Skills',
+      projects: 'Projects',
+      contact: 'Contact'
     },
-    "german": {
-      "whyMe": "Warum mich",
-      "skills": "Fähigkeiten",
-      "projects": "Projekte",
-      "contact": "Kontakt"
+    german: {
+      whyMe: 'Warum mich',
+      skills: 'Fähigkeiten',
+      projects: 'Projekte',
+      contact: 'Kontakt'
     }
   };
-  private scrollTimeout: any;
 
   constructor(
     private languageService: SetLanguageService,
@@ -100,10 +103,23 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   private handleScroll(): void {
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollPosition > this.lastScrollPosition) {
+      // Nach unten scrollen -> Menü-Icon ausblenden
+      this.isMenuIconVisible = false;
+    } else {
+      // Nach oben scrollen -> Menü-Icon einblenden
+      this.isMenuIconVisible = true;
+    }
+
+    this.lastScrollPosition = currentScrollPosition;
+
+    // Zeitversetztes Link-Update
     clearTimeout(this.scrollTimeout);
     this.scrollTimeout = setTimeout(() => {
       this.updateSelectedLinkBasedOnScroll();
-    }, 100); 
+    }, 100);
   }
 
   private updateSelectedLinkBasedOnScroll(): void {
@@ -118,7 +134,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
       const element = document.getElementById(section.id);
       if (element) {
         const rect = element.getBoundingClientRect();
-        if (rect.top <= 100 && rect.bottom >= 100) { 
+        if (rect.top <= 100 && rect.bottom >= 100) {
           this.selectedLink = section.link;
           break;
         }

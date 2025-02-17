@@ -125,28 +125,36 @@ section{
     right: 32px;
     cursor: pointer;
     z-index: 1100;
-
+    opacity: 1; // Sichtbar
+    transition: opacity 0.3s ease;
+  
+    &.hidden {
+      opacity: 0; // Unsichtbar
+      pointer-events: none;
+    }
+  
     > div {
-        background-color: $creme_white;
-        width: 30px;
-        height: 2px;
-        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+      background-color: $creme_white;
+      width: 30px;
+      height: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
     }
-
+  
     &.open {
-        > div:nth-child(1) {
-            transform: translateY(10px) rotate(45deg);
-        }
-
-        > div:nth-child(2) {
-            opacity: 0;
-        }
-
-        > div:nth-child(3) {
-            transform: translateY(-10px) rotate(-45deg);
-        }
+      > div:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+  
+      > div:nth-child(2) {
+        opacity: 0;
+      }
+  
+      > div:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
     }
-}
+  }
+  
 
 .menuOverlay {
     position: fixed;
