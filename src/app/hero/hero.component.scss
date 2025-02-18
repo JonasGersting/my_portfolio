@@ -4,7 +4,7 @@
 section {
     @include orderElements($display: flex, $direction: row);
     width: 100%;
-    height: 780px;
+    height: calc(100vh - 121px);
     background-color: $primary_dark_grey;
 }
 
