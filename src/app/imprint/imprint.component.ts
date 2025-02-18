@@ -47,6 +47,9 @@ export class ImprintComponent {
   }
 
   showPrivacyPolicy(){
+    window.scrollTo({
+      top: 0
+    });
     this.router.navigateByUrl('privacyPolicy');
   }
 }

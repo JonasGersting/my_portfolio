@@ -24,6 +24,9 @@ export class FooterComponent {
   }
 
   showImprint(){
+    window.scrollTo({
+      top: 0
+    });
     this.router.navigateByUrl('imprint');
   }
 }
