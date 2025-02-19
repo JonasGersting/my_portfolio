@@ -60,8 +60,16 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   setLink(link: string): void {
-    this.selectedLink = link;
-    this.closeMenu();
+    const currentUrl = this.router.url.split('#')[0];
+    const isOnMainPage = currentUrl === '/' || currentUrl === '';  
+    if (isOnMainPage) {
+      this.selectedLink = link;
+      this.closeMenu();
+    } else {
+      this.router.navigateByUrl('');
+      this.selectedLink = link;
+      this.closeMenu();
+    }
   }
 
   toggleRespMenu(): void {
